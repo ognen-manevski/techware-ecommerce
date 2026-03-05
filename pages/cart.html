@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - ShopHub</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-shopping-bag"></i>
+                <span>ShopHub</span>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#products" class="nav-link">Shop</a>
+                <a href="cart.html" class="nav-link active">
+                    <i class="fas fa-shopping-cart"></i>
+                    Cart
+                    <span class="cart-badge">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <main class="cart-section">
+        <div class="cart-container">
+            <h1>Shopping Cart</h1>
+
+            <div class="cart-layout">
+                <!-- Cart Items Column -->
+                <div class="cart-items-column">
+                    <div class="cart-items" id="cartItems">
+                        <!-- Dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- Cart Summary Column -->
+                <aside class="cart-summary">
+                    <div class="summary-box" id="cartSummary">
+                        <!-- Dynamically populated with totals -->
+                    </div>
+
+                    <button class="btn-checkout" id="proceedCheckoutBtn">
+                        Proceed to Checkout
+                    </button>
+
+                    <a href="../index.html#products" class="btn-continue-shopping">
+                        <i class="fas fa-arrow-left"></i>
+                        Continue Shopping
+                    </a>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About ShopHub</h3>
+                <p>Your trusted online shopping destination for quality products and great prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#products">Shop</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: support@shophub.com</p>
+                <p>Phone: 1-800-SHOP-HUB</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="../js/pages/cart.js"></script>
+</body>
+</html>

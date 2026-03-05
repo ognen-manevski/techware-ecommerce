@@ -1,0 +1,333 @@
+/* ============================================================================
+   IMPORTS AND ROOT
+   ============================================================================ */
+
+/* inter - body  */
+/* system ui -from bootstrap  */
+
+/* sora - headings */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+/* sterion - logo and visuals (local font) */
+@font-face {
+  font-family: 'Sterion';
+  src: url('../fonts/Sterion-BLLld.ttf') format('truetype');
+}
+
+
+:root {
+  /* Colors */
+  --primary-color: hsl(244, 96%, 67%);
+  --secondary-color: hsl(160, 84%, 63%);
+
+  /* Bootstrap Color Overrides */
+  --bs-primary: hsl(244, 96%, 67%);
+  --bs-secondary: hsl(160, 84%, 63%);
+  --bs-success: hsl(160, 84%, 63%);
+  --bs-danger: hsl(0, 84%, 60%);
+  --bs-warning: hsl(45, 93%, 47%);
+  --bs-info: hsl(188, 78%, 41%);
+  --bs-light: hsl(244, 96%, 95%);
+  --bs-dark: hsl(244, 96%, 30%);
+  --bs-body-color: #1e293b;
+  --bs-body-bg: #ffffff;
+
+  /* Primary Color Shades */
+  --primary-50: hsla(from var(--primary-color) h s 95% / 1);
+  --primary-100: hsla(from var(--primary-color) h s 90% / 1);
+  --primary-200: hsla(from var(--primary-color) h s 80% / 1);
+  --primary-300: hsla(from var(--primary-color) h s 75% / 1);
+  --primary-400: hsla(from var(--primary-color) h s 70% / 1);
+  --primary-500: var(--primary-color);
+  --primary-600: hsla(from var(--primary-color) h s 60% / 1);
+  --primary-700: hsla(from var(--primary-color) h s 50% / 1);
+  --primary-800: hsla(from var(--primary-color) h s 40% / 1);
+  --primary-900: hsla(from var(--primary-color) h s 30% / 1);
+
+  /* Secondary Color Shades */
+  --secondary-50: hsla(from var(--secondary-color) h s 95% / 1);
+  --secondary-100: hsla(from var(--secondary-color) h s 90% / 1);
+  --secondary-200: hsla(from var(--secondary-color) h s 80% / 1);
+  --secondary-300: hsla(from var(--secondary-color) h s 75% / 1);
+  --secondary-400: hsla(from var(--secondary-color) h s 70% / 1);
+  --secondary-500: var(--secondary-color);
+  --secondary-600: hsla(from var(--secondary-color) h s 60% / 1);
+  --secondary-700: hsla(from var(--secondary-color) h s 50% / 1);
+  --secondary-800: hsla(from var(--secondary-color) h s 40% / 1);
+  --secondary-900: hsla(from var(--secondary-color) h s 30% / 1);
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Typography */
+  --font-heading: 'Sora', sans-serif;
+  --font-logo: 'Sterion', sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-med: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================================================
+   RESET & BASE STYLES
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ============================================================================
+   FONTS
+   ============================================================================ */
+
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* ============================================================================
+   Bootstrap Overrides
+   ============================================================================ */
+
+.navbar-dark {
+  background-color: var(--primary-500) !important;
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  font-family: var(--font-logo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-500) !important;
+  border-color: var(--primary-500) !important;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-600) !important;
+  border-color: var(--secondary-600) !important;
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-700) !important;
+  border-color: var(--secondary-700) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-600) !important;
+  border-color: var(--primary-600) !important;
+}
+
+.btn-outline-primary {
+  color: var(--primary-500) !important;
+  border-color: var(--primary-500) !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-500) !important;
+  color: white !important;
+}
+
+
+.bg-primary {
+  background-color: var(--primary-500) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-500) !important;
+}
+
+.text-primary {
+  color: var(--primary-500) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-500) !important;
+}
+
+.card {
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1 !important;
+}
+
+/* random  */
+
+.view-more-btn {
+  will-change: width;
+}
+
+.view-more-txt {
+  width: 0px;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.view-more-btn:hover .view-more-txt {
+  width: 4ch;
+  height: 1.5rem;
+}
+
+.new-badge {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: white;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  /* font-family: var(--font-heading); */
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+}
+
+.sale-badge {
+  background-color: red;
+  color: white;
+  padding: 0.25rem 3rem;
+  font-weight: bold;
+  font-family: var(--font-heading);
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+
+  /* position */
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  transform-origin: top right;
+  transform: rotate(45deg) translate(50%, 100%);
+}
+
+.sale-badge span {
+  margin-left: 0.5em;
+  letter-spacing: 0;
+  font-size: 0.5em;
+}
+
+.card-sale {
+  position: relative;
+  z-index: 0;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-color: white;
+  box-shadow: var(--shadow-sm), var(--shadow-md);
+}
+
+.card-sale:before,
+.card-sale:after,
+.card-new:before,
+.card-new:after {
+  content: "";
+  position: absolute;
+  z-index: -9;
+  user-select: none;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  padding: 1px;
+  border-radius: 6px;
+  /* rainbow gradient */
+  background: conic-gradient(from var(--angle), red, yellow, lime, cyan, magenta, red);
+  opacity: 0;
+  /* anim */
+  animation: card-gradient-spin 3s linear infinite;
+  /* transitions  */
+  transition: opacity 0.3s ease;
+  will-change: opacity;
+}
+
+.card-new:before,
+.card-new:after {
+  /* primary gradient */
+  background: conic-gradient(from var(--angle), transparent, var(--primary-500));
+}
+
+.card-sale:after,
+.card-new:after {
+  filter: blur(30px);
+  opacity: 0;
+}
+
+.card-sale:hover:before,
+.card-sale:hover:after,
+.card-new:hover:before,
+.card-new:hover:after {
+  opacity: 0.3;
+}
+
+/* custom angle property  */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* conic gradient spin  */
+@keyframes card-gradient-spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
