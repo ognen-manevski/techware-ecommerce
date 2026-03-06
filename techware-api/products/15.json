@@ -1,0 +1,45 @@
+{
+  "id": 15,
+  "sku": "SMS-S24-256",
+  "name": "Samsung Galaxy S24",
+  "shortDescription": "Compact flagship Android phone with bright display and Galaxy AI features.",
+  "description": "Galaxy S24 combines a smooth AMOLED display, flagship-grade cameras, and powerful performance in a compact body.",
+  "categoryIds": [
+    "phones",
+    "gaming"
+  ],
+  "brand": "Samsung",
+  "price": 859.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 21,
+  "weightKg": 0.167,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 411
+  },
+  "comments": [
+    {
+      "name": "Jovan",
+      "rating": 5,
+      "text": "Fast, compact, and the screen is amazing.",
+      "date": "2026-02-19"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p015/thumb.jpg",
+    "main": "techware-api/imgs/p015/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p015/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Display": "6.2\" Dynamic AMOLED 2X 120Hz",
+    "Memory": "8GB RAM / 256GB",
+    "Camera": "50MP + 12MP + 10MP",
+    "Battery": "4000mAh",
+    "Connectivity": "5G / Wi-Fi 6E"
+  }
+}

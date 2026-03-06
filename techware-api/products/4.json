@@ -1,0 +1,52 @@
+{
+  "id": 4,
+  "sku": "KC-K8P-RGB",
+  "name": "Keychron K8 Pro Wireless Mechanical Keyboard",
+  "shortDescription": "Hot-swappable TKL mechanical keyboard with Bluetooth and QMK/VIA support.",
+  "description": "The Keychron K8 Pro is a tenkeyless mechanical keyboard with wired and Bluetooth modes, hot-swappable switches, and full QMK/VIA customization.",
+  "categoryIds": [
+    "keyboards",
+    "accessories"
+  ],
+  "brand": "Keychron",
+  "price": 129,
+  "compareAtPrice": 161.25,
+  "discountPercent": 20,
+  "isNew": true,
+  "stock": 31,
+  "weightKg": 0.92,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.6,
+    "count": 312
+  },
+  "comments": [
+    {
+      "name": "Luka",
+      "rating": 5,
+      "text": "Excellent build quality and great typing feel.",
+      "date": "2026-03-01"
+    },
+    {
+      "name": "Iva",
+      "rating": 4,
+      "text": "VIA software makes remapping very easy.",
+      "date": "2026-02-11"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p004/thumb.jpg",
+    "main": "techware-api/imgs/p004/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p004/g1.jpg",
+      "techware-api/imgs/p004/g2.jpg"
+    ]
+  },
+  "specs": {
+    "Layout": "TKL 87-key",
+    "Connectivity": "Bluetooth 5.1 / USB-C",
+    "Firmware": "QMK / VIA",
+    "Switches": "Hot-swappable mechanical",
+    "Backlight": "RGB"
+  }
+}

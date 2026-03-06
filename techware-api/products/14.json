@@ -1,0 +1,49 @@
+{
+  "id": 14,
+  "sku": "APP-IP15-128",
+  "name": "Apple iPhone 15",
+  "shortDescription": "6.1-inch iPhone with A16 Bionic, USB-C, and 48MP main camera.",
+  "description": "iPhone 15 features a bright Super Retina XDR display, Dynamic Island, powerful A16 Bionic chip, and strong all-round camera performance.",
+  "categoryIds": [
+    "phones",
+    "accessories"
+  ],
+  "brand": "Apple",
+  "price": 799,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 26,
+  "weightKg": 0.171,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.7,
+    "count": 980
+  },
+  "comments": [
+    {
+      "name": "Igor",
+      "rating": 5,
+      "text": "Great camera and excellent everyday performance.",
+      "date": "2026-02-26"
+    },
+    {
+      "name": "Sara",
+      "rating": 4,
+      "text": "Battery and screen quality are very good.",
+      "date": "2026-02-08"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p014/thumb.jpg",
+    "main": "techware-api/imgs/p014/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Display": "6.1\" Super Retina XDR",
+    "Processor": "A16 Bionic",
+    "Storage": "128GB",
+    "Camera": "48MP main + 12MP ultrawide",
+    "Charging": "USB-C"
+  }
+}

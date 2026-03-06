@@ -1,0 +1,46 @@
+{
+  "id": 9,
+  "sku": "SMS-GTABS9-11",
+  "name": "Samsung Galaxy Tab S9 11\"",
+  "shortDescription": "11-inch AMOLED tablet with Snapdragon 8 Gen 2 and S Pen included.",
+  "description": "Samsung Galaxy Tab S9 features a Dynamic AMOLED 2X display, flagship chipset, and S Pen support for productivity and media.",
+  "categoryIds": [
+    "tablets",
+    "computers"
+  ],
+  "brand": "Samsung",
+  "price": 799.99,
+  "compareAtPrice": 999.99,
+  "discountPercent": 20,
+  "isNew": true,
+  "stock": 16,
+  "weightKg": 0.498,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 468
+  },
+  "comments": [
+    {
+      "name": "Ana",
+      "rating": 5,
+      "text": "Display quality is excellent and S Pen is very useful.",
+      "date": "2026-02-25"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p009/thumb.jpg",
+    "main": "techware-api/imgs/p009/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p009/g1.jpg",
+      "techware-api/imgs/p009/g2.jpg"
+    ]
+  },
+  "specs": {
+    "Display": "11\" Dynamic AMOLED 2X 120Hz",
+    "Processor": "Snapdragon 8 Gen 2",
+    "Memory": "8GB RAM / 128GB storage",
+    "Connectivity": "Wi-Fi 6E",
+    "Battery": "8400mAh"
+  }
+}

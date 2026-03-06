@@ -1,0 +1,43 @@
+{
+  "id": 7,
+  "sku": "ASUS-RTAX88U-PRO",
+  "name": "ASUS RT-AX88U Pro",
+  "shortDescription": "Dual-band Wi-Fi 6 router with 2.5G port and AiMesh support.",
+  "description": "ASUS RT-AX88U Pro is a high-performance Wi-Fi 6 router with strong coverage, 2.5G networking, and advanced ASUSWRT features.",
+  "categoryIds": [
+    "networking",
+    "smart-home"
+  ],
+  "brand": "ASUS",
+  "price": 299.99,
+  "compareAtPrice": 374.99,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 19,
+  "weightKg": 1.01,
+  "warrantyMonths": 36,
+  "rating": {
+    "rate": 4.5,
+    "count": 287
+  },
+  "comments": [
+    {
+      "name": "Stefan",
+      "rating": 5,
+      "text": "Great coverage and easy mesh setup.",
+      "date": "2026-02-23"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p007/thumb.jpg",
+    "main": "techware-api/imgs/p007/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "WiFiStandard": "Wi-Fi 6 (802.11ax)",
+    "Bands": "2.4GHz + 5GHz",
+    "MaxSpeed": "Up to AX6000",
+    "Ports": "1x 2.5G + 4x Gigabit LAN",
+    "Mesh": "ASUS AiMesh"
+  }
+}

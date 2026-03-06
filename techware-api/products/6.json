@@ -1,0 +1,45 @@
+{
+  "id": 6,
+  "sku": "SMS-990PRO-1TB",
+  "name": "Samsung 990 PRO 1TB NVMe SSD",
+  "shortDescription": "PCIe 4.0 M.2 SSD with high sequential read and write speeds.",
+  "description": "Samsung 990 PRO 1TB is a premium PCIe 4.0 NVMe SSD designed for gaming, content creation, and fast application load times.",
+  "categoryIds": [
+    "storage",
+    "components"
+  ],
+  "brand": "Samsung",
+  "price": 119.99,
+  "compareAtPrice": 149.99,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 52,
+  "weightKg": 0.009,
+  "warrantyMonths": 60,
+  "rating": {
+    "rate": 4.8,
+    "count": 1240
+  },
+  "comments": [
+    {
+      "name": "Mark",
+      "rating": 5,
+      "text": "Fast and stable even under heavy workloads.",
+      "date": "2026-02-18"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p006/thumb.jpg",
+    "main": "techware-api/imgs/p006/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p006/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Capacity": "1TB",
+    "Interface": "PCIe 4.0 x4 NVMe 2.0",
+    "ReadSpeed": "Up to 7450MB/s",
+    "WriteSpeed": "Up to 6900MB/s",
+    "FormFactor": "M.2 2280"
+  }
+}

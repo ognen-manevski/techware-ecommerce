@@ -1,0 +1,45 @@
+{
+  "id": 36,
+  "sku": "STS-RIVAL3-WL",
+  "name": "SteelSeries Rival 3 Wireless",
+  "shortDescription": "Dual wireless gaming mouse with long battery life and responsive sensor.",
+  "description": "Rival 3 Wireless offers low-latency 2.4GHz mode, Bluetooth fallback, and excellent battery life.",
+  "categoryIds": [
+    "mice",
+    "networking"
+  ],
+  "brand": "SteelSeries",
+  "price": 59.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 39,
+  "weightKg": 0.106,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.5,
+    "count": 367
+  },
+  "comments": [
+    {
+      "name": "Kristina",
+      "rating": 4,
+      "text": "Reliable wireless and very good value.",
+      "date": "2026-02-22"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p036/thumb.jpg",
+    "main": "techware-api/imgs/p036/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p036/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Sensor": "TrueMove Air",
+    "Connectivity": "2.4GHz / Bluetooth",
+    "Battery": "Up to 400 hours",
+    "Weight": "106g",
+    "Buttons": "6 programmable"
+  }
+}

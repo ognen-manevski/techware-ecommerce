@@ -1,0 +1,45 @@
+{
+  "id": 26,
+  "sku": "LG-27GP850B",
+  "name": "LG UltraGear 27GP850-B",
+  "shortDescription": "27-inch QHD Nano IPS monitor with 165Hz refresh rate.",
+  "description": "LG UltraGear 27GP850-B is a fast QHD gaming monitor with strong color performance and smooth adaptive sync support.",
+  "categoryIds": [
+    "monitors",
+    "cables"
+  ],
+  "brand": "LG",
+  "price": 329.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 18,
+  "weightKg": 6.3,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 1220
+  },
+  "comments": [
+    {
+      "name": "Filip",
+      "rating": 5,
+      "text": "Great colors and smooth motion for games.",
+      "date": "2026-02-24"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p026/thumb.jpg",
+    "main": "techware-api/imgs/p026/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p026/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Panel": "Nano IPS",
+    "Resolution": "2560x1440",
+    "RefreshRate": "165Hz",
+    "ResponseTime": "1ms",
+    "Ports": "DisplayPort, HDMI"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": 13,
+  "sku": "APL-MBA-M3-13",
+  "name": "Apple MacBook Air 13-inch (M3)",
+  "shortDescription": "Thin and light laptop with Apple M3 chip and all-day battery life.",
+  "description": "MacBook Air 13-inch with Apple M3 delivers fast everyday performance, excellent battery life, and a lightweight aluminum design.",
+  "categoryIds": [
+    "computers",
+    "laptops"
+  ],
+  "brand": "Apple",
+  "price": 1099,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 12,
+  "weightKg": 1.24,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.8,
+    "count": 522
+  },
+  "comments": [
+    {
+      "name": "Mila",
+      "rating": 5,
+      "text": "Silent, fast, and the battery lasts all day.",
+      "date": "2026-03-01"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p013/thumb.jpg",
+    "main": "techware-api/imgs/p013/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p013/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Processor": "Apple M3",
+    "Memory": "8GB unified memory",
+    "Storage": "256GB SSD",
+    "Display": "13.6\" Liquid Retina",
+    "Battery": "Up to 18 hours"
+  }
+}

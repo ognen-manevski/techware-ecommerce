@@ -1,0 +1,51 @@
+{
+  "id": 8,
+  "sku": "PH-HUE-A19-4PK",
+  "name": "Philips Hue White and Color Ambiance A19 4-Pack",
+  "shortDescription": "Smart color bulbs with Hue app control and voice assistant support.",
+  "description": "Philips Hue A19 White and Color Ambiance bulbs offer customizable scenes, automations, and broad smart-home ecosystem compatibility.",
+  "categoryIds": [
+    "smart-home",
+    "accessories"
+  ],
+  "brand": "Philips Hue",
+  "price": 199.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 37,
+  "weightKg": 0.52,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 910
+  },
+  "comments": [
+    {
+      "name": "Maja",
+      "rating": 5,
+      "text": "Colors are vibrant and automations are reliable.",
+      "date": "2026-02-20"
+    },
+    {
+      "name": "Dejan",
+      "rating": 4,
+      "text": "Premium but the app experience is very good.",
+      "date": "2026-01-28"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p008/thumb.jpg",
+    "main": "techware-api/imgs/p008/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p008/g1.jpg"
+    ]
+  },
+  "specs": {
+    "BulbType": "A19 E27",
+    "Color": "White + 16 million colors",
+    "Connectivity": "Bluetooth / Zigbee",
+    "Control": "Hue app / voice assistants",
+    "Brightness": "Up to 1100 lumens"
+  }
+}

@@ -1,0 +1,927 @@
+[
+  {
+    "id": 1,
+    "sku": "NW-AU-HP-001",
+    "name": "Premium Headphones",
+    "shortDescription": "Noise-cancelling wireless headphones with deep bass and 40h battery.",
+    "categoryIds": [
+      "audio",
+      "accessories"
+    ],
+    "brand": "NovaWare",
+    "price": 249.99,
+    "compareAtPrice": 312.49,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 18,
+    "rating": {
+      "rate": 4.6,
+      "count": 89
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p001/thumb.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "sku": "NW-LT-014",
+    "name": "NovaBook Air 14",
+    "shortDescription": "Ultra-thin 14\" laptop with Ryzen 7 and 16GB RAM.",
+    "categoryIds": [
+      "computers",
+      "laptops"
+    ],
+    "brand": "NovaWare",
+    "price": 1099,
+    "compareAtPrice": 1373.75,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 9,
+    "rating": {
+      "rate": 4.8,
+      "count": 142
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p002/thumb.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "sku": "NW-MN-27G",
+    "name": "NovaView 27 Gaming Monitor",
+    "shortDescription": "27\" QHD IPS monitor with 165Hz refresh rate.",
+    "categoryIds": [
+      "monitors",
+      "gaming"
+    ],
+    "brand": "NovaWare",
+    "price": 329.99,
+    "compareAtPrice": 412.49,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 25,
+    "rating": {
+      "rate": 4.7,
+      "count": 204
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p003/thumb.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "sku": "KC-K8P-RGB",
+    "name": "Keychron K8 Pro Wireless Mechanical Keyboard",
+    "shortDescription": "Hot-swappable TKL mechanical keyboard with Bluetooth and QMK/VIA support.",
+    "categoryIds": [
+      "keyboards",
+      "accessories"
+    ],
+    "brand": "Keychron",
+    "price": 129,
+    "compareAtPrice": 161.25,
+    "discountPercent": 20,
+    "isNew": true,
+    "stock": 31,
+    "rating": {
+      "rate": 4.6,
+      "count": 312
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p004/thumb.jpg"
+    }
+  },
+  {
+    "id": 5,
+    "sku": "LOG-GPX2-BLK",
+    "name": "Logitech G PRO X SUPERLIGHT 2",
+    "shortDescription": "Ultra-light esports mouse with HERO 2 sensor and LIGHTSPEED wireless.",
+    "categoryIds": [
+      "mice",
+      "gaming"
+    ],
+    "brand": "Logitech",
+    "price": 159.99,
+    "compareAtPrice": 199.99,
+    "discountPercent": 20,
+    "isNew": true,
+    "stock": 28,
+    "rating": {
+      "rate": 4.7,
+      "count": 540
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p005/thumb.jpg"
+    }
+  },
+  {
+    "id": 6,
+    "sku": "SMS-990PRO-1TB",
+    "name": "Samsung 990 PRO 1TB NVMe SSD",
+    "shortDescription": "PCIe 4.0 M.2 SSD with high sequential read and write speeds.",
+    "categoryIds": [
+      "storage",
+      "components"
+    ],
+    "brand": "Samsung",
+    "price": 119.99,
+    "compareAtPrice": 149.99,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 52,
+    "rating": {
+      "rate": 4.8,
+      "count": 1240
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p006/thumb.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "sku": "ASUS-RTAX88U-PRO",
+    "name": "ASUS RT-AX88U Pro",
+    "shortDescription": "Dual-band Wi-Fi 6 router with 2.5G port and AiMesh support.",
+    "categoryIds": [
+      "networking",
+      "smart-home"
+    ],
+    "brand": "ASUS",
+    "price": 299.99,
+    "compareAtPrice": 374.99,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 19,
+    "rating": {
+      "rate": 4.5,
+      "count": 287
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p007/thumb.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "sku": "PH-HUE-A19-4PK",
+    "name": "Philips Hue White and Color Ambiance A19 4-Pack",
+    "shortDescription": "Smart color bulbs with Hue app control and voice assistant support.",
+    "categoryIds": [
+      "smart-home",
+      "accessories"
+    ],
+    "brand": "Philips Hue",
+    "price": 199.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 37,
+    "rating": {
+      "rate": 4.6,
+      "count": 910
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p008/thumb.jpg"
+    }
+  },
+  {
+    "id": 9,
+    "sku": "SMS-GTABS9-11",
+    "name": "Samsung Galaxy Tab S9 11\"",
+    "shortDescription": "11-inch AMOLED tablet with Snapdragon 8 Gen 2 and S Pen included.",
+    "categoryIds": [
+      "tablets",
+      "computers"
+    ],
+    "brand": "Samsung",
+    "price": 799.99,
+    "compareAtPrice": 999.99,
+    "discountPercent": 20,
+    "isNew": true,
+    "stock": 16,
+    "rating": {
+      "rate": 4.7,
+      "count": 468
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p009/thumb.jpg"
+    }
+  },
+  {
+    "id": 10,
+    "sku": "GGL-PIX8PRO-256",
+    "name": "Google Pixel 8 Pro",
+    "shortDescription": "Flagship Android phone with Tensor G3 and advanced AI camera features.",
+    "categoryIds": [
+      "phones",
+      "accessories"
+    ],
+    "brand": "Google",
+    "price": 999,
+    "compareAtPrice": 1248.75,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 24,
+    "rating": {
+      "rate": 4.6,
+      "count": 689
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p010/thumb.jpg"
+    }
+  },
+  {
+    "id": 11,
+    "sku": "ANK-735-65W",
+    "name": "Anker 735 Charger (Nano II 65W)",
+    "shortDescription": "Compact GaN charger with 2x USB-C and 1x USB-A ports.",
+    "categoryIds": [
+      "charging",
+      "accessories"
+    ],
+    "brand": "Anker",
+    "price": 59.99,
+    "compareAtPrice": 74.99,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 74,
+    "rating": {
+      "rate": 4.7,
+      "count": 1330
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p011/thumb.jpg"
+    }
+  },
+  {
+    "id": 12,
+    "sku": "CBM-TB4-2M",
+    "name": "Cable Matters Thunderbolt 4 Cable 2m",
+    "shortDescription": "Thunderbolt 4 cable with 40Gbps bandwidth and 100W charging.",
+    "categoryIds": [
+      "cables",
+      "accessories"
+    ],
+    "brand": "Cable Matters",
+    "price": 39.99,
+    "compareAtPrice": 49.99,
+    "discountPercent": 20,
+    "isNew": false,
+    "stock": 88,
+    "rating": {
+      "rate": 4.6,
+      "count": 402
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p012/thumb.jpg"
+    }
+  },
+  {
+    "id": 13,
+    "sku": "APL-MBA-M3-13",
+    "name": "Apple MacBook Air 13-inch (M3)",
+    "shortDescription": "Thin and light laptop with Apple M3 chip and all-day battery life.",
+    "categoryIds": [
+      "computers",
+      "laptops"
+    ],
+    "brand": "Apple",
+    "price": 1099,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 12,
+    "rating": {
+      "rate": 4.8,
+      "count": 522
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p013/thumb.jpg"
+    }
+  },
+  {
+    "id": 14,
+    "sku": "APP-IP15-128",
+    "name": "Apple iPhone 15",
+    "shortDescription": "6.1-inch iPhone with A16 Bionic, USB-C, and 48MP main camera.",
+    "categoryIds": [
+      "phones",
+      "accessories"
+    ],
+    "brand": "Apple",
+    "price": 799,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 26,
+    "rating": {
+      "rate": 4.7,
+      "count": 980
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p014/thumb.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "sku": "SMS-S24-256",
+    "name": "Samsung Galaxy S24",
+    "shortDescription": "Compact flagship Android phone with bright display and Galaxy AI features.",
+    "categoryIds": [
+      "phones",
+      "gaming"
+    ],
+    "brand": "Samsung",
+    "price": 859.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 21,
+    "rating": {
+      "rate": 4.6,
+      "count": 411
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p015/thumb.jpg"
+    }
+  },
+  {
+    "id": 16,
+    "sku": "SON-WH1000XM5",
+    "name": "Sony WH-1000XM5",
+    "shortDescription": "Wireless noise-canceling headphones with premium comfort and sound.",
+    "categoryIds": [
+      "audio",
+      "accessories"
+    ],
+    "brand": "Sony",
+    "price": 349.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 33,
+    "rating": {
+      "rate": 4.8,
+      "count": 1675
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p016/thumb.jpg"
+    }
+  },
+  {
+    "id": 17,
+    "sku": "LOG-MXK3S",
+    "name": "Logitech MX Keys S",
+    "shortDescription": "Low-profile wireless keyboard for productivity with smart backlighting.",
+    "categoryIds": [
+      "keyboards",
+      "computers"
+    ],
+    "brand": "Logitech",
+    "price": 109.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 40,
+    "rating": {
+      "rate": 4.7,
+      "count": 760
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p017/thumb.jpg"
+    }
+  },
+  {
+    "id": 18,
+    "sku": "WD-BLKSN770-2T",
+    "name": "WD_BLACK SN770 2TB NVMe SSD",
+    "shortDescription": "PCIe 4.0 NVMe SSD optimized for gaming and fast load times.",
+    "categoryIds": [
+      "storage",
+      "gaming"
+    ],
+    "brand": "Western Digital",
+    "price": 149.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 48,
+    "rating": {
+      "rate": 4.7,
+      "count": 1335
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p018/thumb.jpg"
+    }
+  },
+  {
+    "id": 19,
+    "sku": "TPL-DECOXE75-3PK",
+    "name": "TP-Link Deco XE75 (3-Pack)",
+    "shortDescription": "Tri-band Wi-Fi 6E mesh system for large homes and many devices.",
+    "categoryIds": [
+      "networking",
+      "smart-home"
+    ],
+    "brand": "TP-Link",
+    "price": 399.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 17,
+    "rating": {
+      "rate": 4.5,
+      "count": 602
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p019/thumb.jpg"
+    }
+  },
+  {
+    "id": 20,
+    "sku": "NIN-SWITCH-OLED",
+    "name": "Nintendo Switch - OLED Model",
+    "shortDescription": "Hybrid handheld/TV console with vivid 7-inch OLED screen.",
+    "categoryIds": [
+      "gaming",
+      "accessories"
+    ],
+    "brand": "Nintendo",
+    "price": 349.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 29,
+    "rating": {
+      "rate": 4.8,
+      "count": 2180
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p020/thumb.jpg"
+    }
+  },
+  {
+    "id": 21,
+    "sku": "BEL-BOOSTPRO3IN1",
+    "name": "Belkin BoostCharge Pro 3-in-1 Magnetic Charger",
+    "shortDescription": "3-in-1 stand charger for iPhone, Apple Watch, and AirPods.",
+    "categoryIds": [
+      "charging",
+      "accessories"
+    ],
+    "brand": "Belkin",
+    "price": 149.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 35,
+    "rating": {
+      "rate": 4.6,
+      "count": 355
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p021/thumb.jpg"
+    }
+  },
+  {
+    "id": 22,
+    "sku": "BOS-QCUH-BLK",
+    "name": "Bose QuietComfort Ultra Headphones",
+    "shortDescription": "Premium wireless noise-cancelling headphones with immersive audio.",
+    "categoryIds": [
+      "audio",
+      "phones"
+    ],
+    "brand": "Bose",
+    "price": 429,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 20,
+    "rating": {
+      "rate": 4.6,
+      "count": 512
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p022/thumb.jpg"
+    }
+  },
+  {
+    "id": 23,
+    "sku": "APL-AIRPODS-PRO2",
+    "name": "Apple AirPods Pro (2nd generation)",
+    "shortDescription": "True wireless earbuds with Adaptive Audio and USB-C charging case.",
+    "categoryIds": [
+      "audio",
+      "phones",
+      "charging"
+    ],
+    "brand": "Apple",
+    "price": 249,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 38,
+    "rating": {
+      "rate": 4.7,
+      "count": 2310
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p023/thumb.jpg"
+    }
+  },
+  {
+    "id": 24,
+    "sku": "DLL-XPS13-9340",
+    "name": "Dell XPS 13 (9340)",
+    "shortDescription": "Compact premium laptop with Intel Core Ultra and slim InfinityEdge display.",
+    "categoryIds": [
+      "laptops",
+      "computers",
+      "components"
+    ],
+    "brand": "Dell",
+    "price": 1299.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 11,
+    "rating": {
+      "rate": 4.6,
+      "count": 410
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p024/thumb.jpg"
+    }
+  },
+  {
+    "id": 25,
+    "sku": "LEN-T14-G5",
+    "name": "Lenovo ThinkPad T14 Gen 5",
+    "shortDescription": "Business laptop with durable chassis and excellent keyboard.",
+    "categoryIds": [
+      "laptops",
+      "storage"
+    ],
+    "brand": "Lenovo",
+    "price": 1199,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 14,
+    "rating": {
+      "rate": 4.6,
+      "count": 265
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p025/thumb.jpg"
+    }
+  },
+  {
+    "id": 26,
+    "sku": "LG-27GP850B",
+    "name": "LG UltraGear 27GP850-B",
+    "shortDescription": "27-inch QHD Nano IPS monitor with 165Hz refresh rate.",
+    "categoryIds": [
+      "monitors",
+      "cables"
+    ],
+    "brand": "LG",
+    "price": 329.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 18,
+    "rating": {
+      "rate": 4.7,
+      "count": 1220
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p026/thumb.jpg"
+    }
+  },
+  {
+    "id": 27,
+    "sku": "DLL-U2723QE",
+    "name": "Dell UltraSharp U2723QE",
+    "shortDescription": "27-inch 4K IPS Black monitor with USB-C hub and ergonomic stand.",
+    "categoryIds": [
+      "monitors",
+      "components"
+    ],
+    "brand": "Dell",
+    "price": 549.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 10,
+    "rating": {
+      "rate": 4.7,
+      "count": 544
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p027/thumb.jpg"
+    }
+  },
+  {
+    "id": 28,
+    "sku": "ASU-PA278QV",
+    "name": "ASUS ProArt Display PA278QV",
+    "shortDescription": "27-inch QHD monitor calibrated for color-accurate creative work.",
+    "categoryIds": [
+      "monitors",
+      "cables"
+    ],
+    "brand": "ASUS",
+    "price": 299.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 16,
+    "rating": {
+      "rate": 4.6,
+      "count": 438
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p028/thumb.jpg"
+    }
+  },
+  {
+    "id": 29,
+    "sku": "SMS-ODYSSEY-G5-32",
+    "name": "Samsung Odyssey G5 32-inch",
+    "shortDescription": "Curved QHD monitor with high refresh rate for immersive play.",
+    "categoryIds": [
+      "monitors",
+      "components"
+    ],
+    "brand": "Samsung",
+    "price": 279.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 20,
+    "rating": {
+      "rate": 4.5,
+      "count": 690
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p029/thumb.jpg"
+    }
+  },
+  {
+    "id": 30,
+    "sku": "LOG-MX-KEYS-S",
+    "name": "Logitech MX Keys S",
+    "shortDescription": "Low-profile wireless keyboard for productivity across multiple devices.",
+    "categoryIds": [
+      "keyboards",
+      "tablets"
+    ],
+    "brand": "Logitech",
+    "price": 109.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 42,
+    "rating": {
+      "rate": 4.7,
+      "count": 760
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p030/thumb.jpg"
+    }
+  },
+  {
+    "id": 31,
+    "sku": "KEY-K2PRO-RGB",
+    "name": "Keychron K2 Pro",
+    "shortDescription": "Compact wireless mechanical keyboard with QMK/VIA customization.",
+    "categoryIds": [
+      "keyboards",
+      "cables"
+    ],
+    "brand": "Keychron",
+    "price": 119,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 35,
+    "rating": {
+      "rate": 4.6,
+      "count": 334
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p031/thumb.jpg"
+    }
+  },
+  {
+    "id": 32,
+    "sku": "COR-K70-CORE",
+    "name": "Corsair K70 CORE",
+    "shortDescription": "Mechanical gaming keyboard with responsive switches and durable frame.",
+    "categoryIds": [
+      "keyboards",
+      "components"
+    ],
+    "brand": "Corsair",
+    "price": 99.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 30,
+    "rating": {
+      "rate": 4.5,
+      "count": 290
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p032/thumb.jpg"
+    }
+  },
+  {
+    "id": 33,
+    "sku": "LOG-MXMASTER3S",
+    "name": "Logitech MX Master 3S",
+    "shortDescription": "Ergonomic wireless mouse with precision sensor and quiet clicks.",
+    "categoryIds": [
+      "mice",
+      "tablets"
+    ],
+    "brand": "Logitech",
+    "price": 99.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": true,
+    "stock": 41,
+    "rating": {
+      "rate": 4.8,
+      "count": 1420
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p033/thumb.jpg"
+    }
+  },
+  {
+    "id": 34,
+    "sku": "RAZ-DA-V3PRO",
+    "name": "Razer DeathAdder V3 Pro",
+    "shortDescription": "Ultra-light wireless esports mouse with Focus Pro optical sensor.",
+    "categoryIds": [
+      "mice",
+      "charging"
+    ],
+    "brand": "Razer",
+    "price": 149.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 24,
+    "rating": {
+      "rate": 4.6,
+      "count": 485
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p034/thumb.jpg"
+    }
+  },
+  {
+    "id": 35,
+    "sku": "APL-MAGIC-MOUSE2",
+    "name": "Apple Magic Mouse",
+    "shortDescription": "Multi-touch wireless mouse with smooth gesture support for macOS.",
+    "categoryIds": [
+      "mice",
+      "cables"
+    ],
+    "brand": "Apple",
+    "price": 79,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 33,
+    "rating": {
+      "rate": 4.3,
+      "count": 890
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p035/thumb.jpg"
+    }
+  },
+  {
+    "id": 36,
+    "sku": "STS-RIVAL3-WL",
+    "name": "SteelSeries Rival 3 Wireless",
+    "shortDescription": "Dual wireless gaming mouse with long battery life and responsive sensor.",
+    "categoryIds": [
+      "mice",
+      "networking"
+    ],
+    "brand": "SteelSeries",
+    "price": 59.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 39,
+    "rating": {
+      "rate": 4.5,
+      "count": 367
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p036/thumb.jpg"
+    }
+  },
+  {
+    "id": 37,
+    "sku": "MSC-SURFACE-P10",
+    "name": "Microsoft Surface Pro 10",
+    "shortDescription": "2-in-1 tablet-laptop with detachable keyboard and touchscreen display.",
+    "categoryIds": [
+      "tablets",
+      "laptops",
+      "storage"
+    ],
+    "brand": "Microsoft",
+    "price": 1199.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 13,
+    "rating": {
+      "rate": 4.6,
+      "count": 210
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p037/thumb.jpg"
+    }
+  },
+  {
+    "id": 38,
+    "sku": "APL-IPADMINI-A17",
+    "name": "Apple iPad mini",
+    "shortDescription": "Compact high-performance tablet with support for Apple Pencil.",
+    "categoryIds": [
+      "tablets",
+      "networking",
+      "smart-home"
+    ],
+    "brand": "Apple",
+    "price": 499,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 22,
+    "rating": {
+      "rate": 4.7,
+      "count": 702
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p038/thumb.jpg"
+    }
+  },
+  {
+    "id": 39,
+    "sku": "GGL-NESTWIFIPRO-3",
+    "name": "Google Nest Wifi Pro (3-Pack)",
+    "shortDescription": "Tri-band Wi-Fi 6E mesh routers for stable whole-home coverage.",
+    "categoryIds": [
+      "networking",
+      "smart-home",
+      "charging"
+    ],
+    "brand": "Google",
+    "price": 379.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 17,
+    "rating": {
+      "rate": 4.4,
+      "count": 341
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p039/thumb.jpg"
+    }
+  },
+  {
+    "id": 40,
+    "sku": "SON-NWA306-32",
+    "name": "Sony NW-A306 Walkman",
+    "shortDescription": "Portable hi-res music player with expandable storage and Android OS.",
+    "categoryIds": [
+      "storage",
+      "audio"
+    ],
+    "brand": "Sony",
+    "price": 349.99,
+    "compareAtPrice": null,
+    "discountPercent": null,
+    "isNew": false,
+    "stock": 19,
+    "rating": {
+      "rate": 4.4,
+      "count": 188
+    },
+    "images": {
+      "thumbnail": "techware-api/imgs/p040/thumb.jpg"
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "id": 16,
+  "sku": "SON-WH1000XM5",
+  "name": "Sony WH-1000XM5",
+  "shortDescription": "Wireless noise-canceling headphones with premium comfort and sound.",
+  "description": "Sony WH-1000XM5 headphones deliver class-leading ANC, rich sound tuning, and long battery life for travel and daily use.",
+  "categoryIds": [
+    "audio",
+    "accessories"
+  ],
+  "brand": "Sony",
+  "price": 349.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 33,
+  "weightKg": 0.25,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.8,
+    "count": 1675
+  },
+  "comments": [
+    {
+      "name": "Elena",
+      "rating": 5,
+      "text": "Top-tier ANC and very comfortable for long sessions.",
+      "date": "2026-02-22"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p016/thumb.jpg",
+    "main": "techware-api/imgs/p016/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p016/g1.jpg",
+      "techware-api/imgs/p016/g2.jpg"
+    ]
+  },
+  "specs": {
+    "Connectivity": "Bluetooth 5.2",
+    "Battery": "Up to 30 hours",
+    "NoiseCancellation": "Active ANC",
+    "Charging": "USB-C",
+    "Microphones": "8-mic array"
+  }
+}

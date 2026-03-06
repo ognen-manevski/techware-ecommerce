@@ -1,0 +1,43 @@
+{
+  "id": 32,
+  "sku": "COR-K70-CORE",
+  "name": "Corsair K70 CORE",
+  "shortDescription": "Mechanical gaming keyboard with responsive switches and durable frame.",
+  "description": "Corsair K70 CORE offers reliable performance, customizable RGB, and robust build quality.",
+  "categoryIds": [
+    "keyboards",
+    "components"
+  ],
+  "brand": "Corsair",
+  "price": 99.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 30,
+  "weightKg": 0.94,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.5,
+    "count": 290
+  },
+  "comments": [
+    {
+      "name": "Mile",
+      "rating": 4,
+      "text": "Great feel and very stable in fast games.",
+      "date": "2026-02-12"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p032/thumb.jpg",
+    "main": "techware-api/imgs/p032/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "SwitchType": "Mechanical",
+    "PollingRate": "1000Hz",
+    "Backlight": "Per-key RGB",
+    "MediaKeys": "Dedicated media controls",
+    "Connectivity": "USB-C"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": 27,
+  "sku": "DLL-U2723QE",
+  "name": "Dell UltraSharp U2723QE",
+  "shortDescription": "27-inch 4K IPS Black monitor with USB-C hub and ergonomic stand.",
+  "description": "Dell U2723QE is a productivity-focused 4K monitor with excellent color consistency and versatile connectivity.",
+  "categoryIds": [
+    "monitors",
+    "components"
+  ],
+  "brand": "Dell",
+  "price": 549.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 10,
+  "weightKg": 6.64,
+  "warrantyMonths": 36,
+  "rating": {
+    "rate": 4.7,
+    "count": 544
+  },
+  "comments": [
+    {
+      "name": "Ana",
+      "rating": 5,
+      "text": "Excellent office monitor with clean USB-C docking.",
+      "date": "2026-02-17"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p027/thumb.jpg",
+    "main": "techware-api/imgs/p027/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Panel": "IPS Black",
+    "Resolution": "3840x2160",
+    "Hub": "USB-C 90W",
+    "Color": "98% DCI-P3",
+    "Adjustments": "Height / tilt / swivel / pivot"
+  }
+}

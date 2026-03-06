@@ -1,0 +1,43 @@
+{
+  "id": 28,
+  "sku": "ASU-PA278QV",
+  "name": "ASUS ProArt Display PA278QV",
+  "shortDescription": "27-inch QHD monitor calibrated for color-accurate creative work.",
+  "description": "ASUS ProArt PA278QV is designed for designers and editors needing reliable color accuracy and flexible ergonomics.",
+  "categoryIds": [
+    "monitors",
+    "cables"
+  ],
+  "brand": "ASUS",
+  "price": 299.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 16,
+  "weightKg": 7,
+  "warrantyMonths": 36,
+  "rating": {
+    "rate": 4.6,
+    "count": 438
+  },
+  "comments": [
+    {
+      "name": "Marija",
+      "rating": 5,
+      "text": "Very good color for photo editing at this price.",
+      "date": "2026-02-15"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p028/thumb.jpg",
+    "main": "techware-api/imgs/p028/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Panel": "IPS",
+    "Resolution": "2560x1440",
+    "Color": "100% sRGB",
+    "RefreshRate": "75Hz",
+    "Ports": "DisplayPort, HDMI, DVI-D"
+  }
+}

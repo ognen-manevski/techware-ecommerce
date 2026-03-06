@@ -1,0 +1,45 @@
+{
+  "id": 18,
+  "sku": "WD-BLKSN770-2T",
+  "name": "WD_BLACK SN770 2TB NVMe SSD",
+  "shortDescription": "PCIe 4.0 NVMe SSD optimized for gaming and fast load times.",
+  "description": "WD_BLACK SN770 2TB offers strong Gen4 performance for game libraries, creative apps, and responsive system upgrades.",
+  "categoryIds": [
+    "storage",
+    "gaming"
+  ],
+  "brand": "Western Digital",
+  "price": 149.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 48,
+  "weightKg": 0.007,
+  "warrantyMonths": 60,
+  "rating": {
+    "rate": 4.7,
+    "count": 1335
+  },
+  "comments": [
+    {
+      "name": "Viktor",
+      "rating": 5,
+      "text": "Great value and noticeably faster game loads.",
+      "date": "2026-02-24"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p018/thumb.jpg",
+    "main": "techware-api/imgs/p018/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p018/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Capacity": "2TB",
+    "Interface": "PCIe 4.0 x4 NVMe",
+    "ReadSpeed": "Up to 5150MB/s",
+    "FormFactor": "M.2 2280",
+    "Endurance": "1200 TBW"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": 3,
+  "sku": "NW-MN-27G",
+  "name": "NovaView 27 Gaming Monitor",
+  "shortDescription": "27\" QHD IPS monitor with 165Hz refresh rate.",
+  "description": "High-performance gaming monitor with ultra-smooth 165Hz refresh rate and vibrant IPS panel.",
+  "categoryIds": [
+    "monitors",
+    "gaming"
+  ],
+  "brand": "NovaWare",
+  "price": 329.99,
+  "compareAtPrice": 412.49,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 25,
+  "weightKg": 4.2,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 204
+  },
+  "comments": [
+    {
+      "name": "Marko",
+      "rating": 5,
+      "text": "Perfect for gaming and color accuracy.",
+      "date": "2026-02-05"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p003/thumb.jpg",
+    "main": "techware-api/imgs/p003/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Panel": "IPS",
+    "Resolution": "2560x1440",
+    "Refresh Rate": "165Hz",
+    "Response Time": "1ms",
+    "Ports": "HDMI, DisplayPort"
+  }
+}

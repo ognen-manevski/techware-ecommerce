@@ -1,0 +1,49 @@
+{
+  "id": 10,
+  "sku": "GGL-PIX8PRO-256",
+  "name": "Google Pixel 8 Pro",
+  "shortDescription": "Flagship Android phone with Tensor G3 and advanced AI camera features.",
+  "description": "Google Pixel 8 Pro combines a bright LTPO OLED display, Tensor G3 performance, and one of the best computational photography experiences.",
+  "categoryIds": [
+    "phones",
+    "accessories"
+  ],
+  "brand": "Google",
+  "price": 999,
+  "compareAtPrice": 1248.75,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 24,
+  "weightKg": 0.213,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 689
+  },
+  "comments": [
+    {
+      "name": "Filip",
+      "rating": 5,
+      "text": "Photos are consistently excellent in all lighting.",
+      "date": "2026-02-09"
+    },
+    {
+      "name": "Tina",
+      "rating": 4,
+      "text": "Great software and camera tools.",
+      "date": "2026-01-16"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p010/thumb.jpg",
+    "main": "techware-api/imgs/p010/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Display": "6.7\" LTPO OLED 120Hz",
+    "Processor": "Google Tensor G3",
+    "Memory": "12GB RAM / 256GB",
+    "Camera": "50MP + 48MP + 48MP",
+    "Battery": "5050mAh"
+  }
+}

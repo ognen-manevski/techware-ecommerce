@@ -1,0 +1,45 @@
+{
+  "id": 29,
+  "sku": "SMS-ODYSSEY-G5-32",
+  "name": "Samsung Odyssey G5 32-inch",
+  "shortDescription": "Curved QHD monitor with high refresh rate for immersive play.",
+  "description": "Samsung Odyssey G5 provides a large curved panel and smooth refresh rate for gaming and media.",
+  "categoryIds": [
+    "monitors",
+    "components"
+  ],
+  "brand": "Samsung",
+  "price": 279.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 20,
+  "weightKg": 5.7,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.5,
+    "count": 690
+  },
+  "comments": [
+    {
+      "name": "Bojan",
+      "rating": 4,
+      "text": "Great size and smooth gameplay for the price.",
+      "date": "2026-02-10"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p029/thumb.jpg",
+    "main": "techware-api/imgs/p029/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p029/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Panel": "VA Curved",
+    "Resolution": "2560x1440",
+    "RefreshRate": "165Hz",
+    "ResponseTime": "1ms MPRT",
+    "Sync": "AMD FreeSync Premium"
+  }
+}

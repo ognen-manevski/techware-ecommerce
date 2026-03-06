@@ -1,0 +1,45 @@
+{
+  "id": 40,
+  "sku": "SON-NWA306-32",
+  "name": "Sony NW-A306 Walkman",
+  "shortDescription": "Portable hi-res music player with expandable storage and Android OS.",
+  "description": "Sony NW-A306 is a compact high-resolution digital audio player for dedicated music listening with local storage and streaming support.",
+  "categoryIds": [
+    "storage",
+    "audio"
+  ],
+  "brand": "Sony",
+  "price": 349.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 19,
+  "weightKg": 0.113,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.4,
+    "count": 188
+  },
+  "comments": [
+    {
+      "name": "Aleksandar",
+      "rating": 4,
+      "text": "Great sound quality for wired headphones.",
+      "date": "2026-02-14"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p040/thumb.jpg",
+    "main": "techware-api/imgs/p040/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p040/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Storage": "32GB + microSD",
+    "AudioSupport": "Hi-Res Audio",
+    "Connectivity": "Wi-Fi / Bluetooth",
+    "Battery": "Up to 36 hours",
+    "OS": "Android"
+  }
+}

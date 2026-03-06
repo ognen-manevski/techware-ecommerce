@@ -1,0 +1,43 @@
+{
+  "id": 30,
+  "sku": "LOG-MX-KEYS-S",
+  "name": "Logitech MX Keys S",
+  "shortDescription": "Low-profile wireless keyboard for productivity across multiple devices.",
+  "description": "MX Keys S offers precise typing, smart backlighting, and easy switching between desktops and tablets.",
+  "categoryIds": [
+    "keyboards",
+    "tablets"
+  ],
+  "brand": "Logitech",
+  "price": 109.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 42,
+  "weightKg": 0.81,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 760
+  },
+  "comments": [
+    {
+      "name": "Jana",
+      "rating": 5,
+      "text": "Excellent keyboard for both laptop and tablet setup.",
+      "date": "2026-03-02"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p030/thumb.jpg",
+    "main": "techware-api/imgs/p030/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Layout": "Full-size",
+    "Connectivity": "Bluetooth / Logi Bolt",
+    "Battery": "Up to 10 days with backlight",
+    "Backlight": "Smart adaptive",
+    "Compatibility": "Windows / macOS / iPadOS"
+  }
+}

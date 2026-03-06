@@ -1,0 +1,44 @@
+{
+  "id": 39,
+  "sku": "GGL-NESTWIFIPRO-3",
+  "name": "Google Nest Wifi Pro (3-Pack)",
+  "shortDescription": "Tri-band Wi-Fi 6E mesh routers for stable whole-home coverage.",
+  "description": "Google Nest Wifi Pro (3-Pack) provides reliable whole-home Wi-Fi 6E coverage with simple setup and management through the Google Home app.",
+  "categoryIds": [
+    "networking",
+    "smart-home",
+    "charging"
+  ],
+  "brand": "Google",
+  "price": 379.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 17,
+  "weightKg": 2,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.4,
+    "count": 341
+  },
+  "comments": [
+    {
+      "name": "Bojan",
+      "rating": 4,
+      "text": "Simple setup and stable speed across the apartment.",
+      "date": "2026-03-02"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p039/thumb.jpg",
+    "main": "techware-api/imgs/p039/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "WiFiStandard": "Wi-Fi 6E",
+    "Bands": "2.4GHz + 5GHz + 6GHz",
+    "Coverage": "Up to 6600 sq ft",
+    "Ethernet": "2x Gigabit per unit",
+    "App": "Google Home"
+  }
+}

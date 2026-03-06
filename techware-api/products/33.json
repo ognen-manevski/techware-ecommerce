@@ -1,0 +1,45 @@
+{
+  "id": 33,
+  "sku": "LOG-MXMASTER3S",
+  "name": "Logitech MX Master 3S",
+  "shortDescription": "Ergonomic wireless mouse with precision sensor and quiet clicks.",
+  "description": "MX Master 3S is a premium productivity mouse designed for comfortable long sessions and multi-device workflows.",
+  "categoryIds": [
+    "mice",
+    "tablets"
+  ],
+  "brand": "Logitech",
+  "price": 99.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 41,
+  "weightKg": 0.141,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.8,
+    "count": 1420
+  },
+  "comments": [
+    {
+      "name": "Irena",
+      "rating": 5,
+      "text": "Super comfortable and very precise tracking.",
+      "date": "2026-02-20"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p033/thumb.jpg",
+    "main": "techware-api/imgs/p033/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p033/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Sensor": "Darkfield 8000 DPI",
+    "Buttons": "7 programmable",
+    "Connectivity": "Bluetooth / Logi Bolt",
+    "Battery": "Up to 70 days",
+    "Charging": "USB-C"
+  }
+}

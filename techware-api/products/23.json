@@ -1,0 +1,44 @@
+{
+  "id": 23,
+  "sku": "APL-AIRPODS-PRO2",
+  "name": "Apple AirPods Pro (2nd generation)",
+  "shortDescription": "True wireless earbuds with Adaptive Audio and USB-C charging case.",
+  "description": "AirPods Pro (2nd generation) combine strong active noise cancelation, rich sound, and seamless Apple ecosystem integration.",
+  "categoryIds": [
+    "audio",
+    "phones",
+    "charging"
+  ],
+  "brand": "Apple",
+  "price": 249,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 38,
+  "weightKg": 0.056,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.7,
+    "count": 2310
+  },
+  "comments": [
+    {
+      "name": "Maja",
+      "rating": 5,
+      "text": "Great sound and very convenient for iPhone.",
+      "date": "2026-02-27"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p023/thumb.jpg",
+    "main": "techware-api/imgs/p023/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Chip": "Apple H2",
+    "Audio": "Active Noise Cancellation",
+    "Battery": "Up to 6 hours per charge",
+    "CaseCharging": "USB-C / MagSafe",
+    "WaterResistance": "IP54"
+  }
+}

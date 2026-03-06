@@ -1,0 +1,43 @@
+{
+  "id": 12,
+  "sku": "CBM-TB4-2M",
+  "name": "Cable Matters Thunderbolt 4 Cable 2m",
+  "shortDescription": "Thunderbolt 4 cable with 40Gbps bandwidth and 100W charging.",
+  "description": "Cable Matters Thunderbolt 4 cable supports high-speed data, high-resolution displays, and USB-C Power Delivery up to 100W.",
+  "categoryIds": [
+    "cables",
+    "accessories"
+  ],
+  "brand": "Cable Matters",
+  "price": 39.99,
+  "compareAtPrice": 49.99,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 88,
+  "weightKg": 0.09,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.6,
+    "count": 402
+  },
+  "comments": [
+    {
+      "name": "Kristijan",
+      "rating": 5,
+      "text": "Stable with dock, monitor, and external SSD.",
+      "date": "2026-02-12"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p012/thumb.jpg",
+    "main": "techware-api/imgs/p012/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Length": "2m",
+    "Bandwidth": "40Gbps",
+    "PowerDelivery": "Up to 100W",
+    "VideoSupport": "Up to 8K@60Hz",
+    "Connector": "USB-C to USB-C"
+  }
+}

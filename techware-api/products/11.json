@@ -1,0 +1,45 @@
+{
+  "id": 11,
+  "sku": "ANK-735-65W",
+  "name": "Anker 735 Charger (Nano II 65W)",
+  "shortDescription": "Compact GaN charger with 2x USB-C and 1x USB-A ports.",
+  "description": "Anker 735 (Nano II 65W) is a compact multi-port GaN wall charger suitable for phones, tablets, and many USB-C laptops.",
+  "categoryIds": [
+    "charging",
+    "accessories"
+  ],
+  "brand": "Anker",
+  "price": 59.99,
+  "compareAtPrice": 74.99,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 74,
+  "weightKg": 0.132,
+  "warrantyMonths": 18,
+  "rating": {
+    "rate": 4.7,
+    "count": 1330
+  },
+  "comments": [
+    {
+      "name": "Boris",
+      "rating": 5,
+      "text": "Perfect one-charger setup for laptop and phone.",
+      "date": "2026-02-14"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p011/thumb.jpg",
+    "main": "techware-api/imgs/p011/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p011/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Output": "Up to 65W USB-C PD",
+    "Ports": "2x USB-C, 1x USB-A",
+    "Technology": "GaN II",
+    "Input": "100-240V",
+    "Safety": "ActiveShield temperature monitoring"
+  }
+}

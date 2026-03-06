@@ -1,0 +1,43 @@
+{
+  "id": 35,
+  "sku": "APL-MAGIC-MOUSE2",
+  "name": "Apple Magic Mouse",
+  "shortDescription": "Multi-touch wireless mouse with smooth gesture support for macOS.",
+  "description": "Apple Magic Mouse provides gesture-based navigation and a minimalist design for Mac users.",
+  "categoryIds": [
+    "mice",
+    "cables"
+  ],
+  "brand": "Apple",
+  "price": 79,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 33,
+  "weightKg": 0.099,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.3,
+    "count": 890
+  },
+  "comments": [
+    {
+      "name": "Petra",
+      "rating": 4,
+      "text": "Great gestures and build quality for Mac workflows.",
+      "date": "2026-02-09"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p035/thumb.jpg",
+    "main": "techware-api/imgs/p035/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Surface": "Multi-Touch",
+    "Connectivity": "Bluetooth",
+    "Charging": "USB-C",
+    "Compatibility": "macOS / iPadOS",
+    "Battery": "Rechargeable"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": 22,
+  "sku": "BOS-QCUH-BLK",
+  "name": "Bose QuietComfort Ultra Headphones",
+  "shortDescription": "Premium wireless noise-cancelling headphones with immersive audio.",
+  "description": "Bose QuietComfort Ultra Headphones deliver strong active noise cancellation, premium comfort, and spatial audio features for music and calls.",
+  "categoryIds": [
+    "audio",
+    "phones"
+  ],
+  "brand": "Bose",
+  "price": 429,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 20,
+  "weightKg": 0.254,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 512
+  },
+  "comments": [
+    {
+      "name": "Mile",
+      "rating": 5,
+      "text": "Excellent ANC and very comfortable for long flights.",
+      "date": "2026-03-05"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p022/thumb.jpg",
+    "main": "techware-api/imgs/p022/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p022/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Connectivity": "Bluetooth 5.3",
+    "Battery": "Up to 24 hours",
+    "NoiseCancellation": "Active ANC",
+    "Charging": "USB-C",
+    "AudioFeature": "Immersive Audio"
+  }
+}

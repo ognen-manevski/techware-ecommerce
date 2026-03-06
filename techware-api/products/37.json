@@ -1,0 +1,44 @@
+{
+  "id": 37,
+  "sku": "MSC-SURFACE-P10",
+  "name": "Microsoft Surface Pro 10",
+  "shortDescription": "2-in-1 tablet-laptop with detachable keyboard and touchscreen display.",
+  "description": "Surface Pro 10 combines tablet flexibility with laptop productivity in a lightweight premium design.",
+  "categoryIds": [
+    "tablets",
+    "laptops",
+    "storage"
+  ],
+  "brand": "Microsoft",
+  "price": 1199.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 13,
+  "weightKg": 0.879,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.6,
+    "count": 210
+  },
+  "comments": [
+    {
+      "name": "Goran",
+      "rating": 5,
+      "text": "Very versatile device for work and travel.",
+      "date": "2026-03-04"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p037/thumb.jpg",
+    "main": "techware-api/imgs/p037/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Display": "13\" PixelSense Flow",
+    "CPU": "Intel Core Ultra 5",
+    "RAM": "16GB",
+    "Storage": "512GB SSD",
+    "FormFactor": "Tablet + detachable keyboard"
+  }
+}

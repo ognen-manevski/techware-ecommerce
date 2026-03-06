@@ -1,0 +1,45 @@
+{
+  "id": 20,
+  "sku": "NIN-SWITCH-OLED",
+  "name": "Nintendo Switch - OLED Model",
+  "shortDescription": "Hybrid handheld/TV console with vivid 7-inch OLED screen.",
+  "description": "Nintendo Switch OLED model features a larger vibrant display, improved kickstand, and flexible play modes at home or on the go.",
+  "categoryIds": [
+    "gaming",
+    "accessories"
+  ],
+  "brand": "Nintendo",
+  "price": 349.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 29,
+  "weightKg": 0.42,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.8,
+    "count": 2180
+  },
+  "comments": [
+    {
+      "name": "Teo",
+      "rating": 5,
+      "text": "OLED screen looks fantastic in handheld mode.",
+      "date": "2026-02-15"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p020/thumb.jpg",
+    "main": "techware-api/imgs/p020/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p020/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Display": "7\" OLED",
+    "Storage": "64GB",
+    "Modes": "TV / Tabletop / Handheld",
+    "Connectivity": "Wi-Fi / Bluetooth",
+    "Battery": "Approx. 4.5-9 hours"
+  }
+}

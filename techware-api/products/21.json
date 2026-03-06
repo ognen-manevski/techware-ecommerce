@@ -1,0 +1,43 @@
+{
+  "id": 21,
+  "sku": "BEL-BOOSTPRO3IN1",
+  "name": "Belkin BoostCharge Pro 3-in-1 Magnetic Charger",
+  "shortDescription": "3-in-1 stand charger for iPhone, Apple Watch, and AirPods.",
+  "description": "Belkin BoostCharge Pro 3-in-1 offers tidy bedside charging with magnetic alignment and simultaneous charging for Apple devices.",
+  "categoryIds": [
+    "charging",
+    "accessories"
+  ],
+  "brand": "Belkin",
+  "price": 149.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 35,
+  "weightKg": 0.48,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 355
+  },
+  "comments": [
+    {
+      "name": "Monika",
+      "rating": 5,
+      "text": "Very clean setup and reliable overnight charging.",
+      "date": "2026-02-10"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p021/thumb.jpg",
+    "main": "techware-api/imgs/p021/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Type": "3-in-1 magnetic stand",
+    "iPhoneCharging": "Up to 15W",
+    "WatchCharging": "Fast charging supported",
+    "AirPodsCharging": "Integrated pad",
+    "PowerAdapter": "Included"
+  }
+}

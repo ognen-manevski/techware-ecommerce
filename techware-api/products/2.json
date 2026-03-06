@@ -1,0 +1,43 @@
+{
+  "id": 2,
+  "sku": "NW-LT-014",
+  "name": "NovaBook Air 14",
+  "shortDescription": "Ultra-thin 14\" laptop with Ryzen 7 and 16GB RAM.",
+  "description": "Powerful ultrabook with Ryzen 7 processor, 16GB RAM and 512GB NVMe SSD designed for productivity and portability.",
+  "categoryIds": [
+    "computers",
+    "laptops"
+  ],
+  "brand": "NovaWare",
+  "price": 1099,
+  "compareAtPrice": 1373.75,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 9,
+  "weightKg": 1.35,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.8,
+    "count": 142
+  },
+  "comments": [
+    {
+      "name": "Aleks",
+      "rating": 5,
+      "text": "Very fast and super lightweight.",
+      "date": "2026-02-22"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p002/thumb.jpg",
+    "main": "techware-api/imgs/p002/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "CPU": "AMD Ryzen 7",
+    "RAM": "16GB DDR5",
+    "Storage": "512GB NVMe SSD",
+    "Display": "14\" IPS 2560x1600",
+    "Battery": "Up to 12 hours"
+  }
+}

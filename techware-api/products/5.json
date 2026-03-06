@@ -1,0 +1,49 @@
+{
+  "id": 5,
+  "sku": "LOG-GPX2-BLK",
+  "name": "Logitech G PRO X SUPERLIGHT 2",
+  "shortDescription": "Ultra-light esports mouse with HERO 2 sensor and LIGHTSPEED wireless.",
+  "description": "The Logitech G PRO X SUPERLIGHT 2 is an esports-focused wireless mouse with a lightweight shell, HERO 2 sensor, and pro-level low-latency performance.",
+  "categoryIds": [
+    "mice",
+    "gaming"
+  ],
+  "brand": "Logitech",
+  "price": 159.99,
+  "compareAtPrice": 199.99,
+  "discountPercent": 20,
+  "isNew": true,
+  "stock": 28,
+  "weightKg": 0.06,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 540
+  },
+  "comments": [
+    {
+      "name": "Petar",
+      "rating": 5,
+      "text": "Very light and precise for FPS games.",
+      "date": "2026-02-27"
+    },
+    {
+      "name": "Nina",
+      "rating": 4,
+      "text": "Battery life and wireless stability are excellent.",
+      "date": "2026-02-02"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p005/thumb.jpg",
+    "main": "techware-api/imgs/p005/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Sensor": "HERO 2",
+    "Weight": "Approx. 60g",
+    "Connectivity": "LIGHTSPEED wireless / USB-C",
+    "PollingRate": "Up to 2000Hz",
+    "Battery": "Up to 95 hours"
+  }
+}

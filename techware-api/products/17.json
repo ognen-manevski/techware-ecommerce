@@ -1,0 +1,43 @@
+{
+  "id": 17,
+  "sku": "LOG-MXK3S",
+  "name": "Logitech MX Keys S",
+  "shortDescription": "Low-profile wireless keyboard for productivity with smart backlighting.",
+  "description": "Logitech MX Keys S is a full-size keyboard with comfortable typing, multi-device support, and USB-C rechargeable battery.",
+  "categoryIds": [
+    "keyboards",
+    "computers"
+  ],
+  "brand": "Logitech",
+  "price": 109.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 40,
+  "weightKg": 0.81,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.7,
+    "count": 760
+  },
+  "comments": [
+    {
+      "name": "Ana",
+      "rating": 5,
+      "text": "Excellent typing feel for office work.",
+      "date": "2026-02-13"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p017/thumb.jpg",
+    "main": "techware-api/imgs/p017/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "Layout": "Full-size",
+    "Connectivity": "Bluetooth / Logi Bolt",
+    "Battery": "Up to 10 days with backlight",
+    "Backlight": "Smart adaptive",
+    "Compatibility": "Windows / macOS / Linux"
+  }
+}

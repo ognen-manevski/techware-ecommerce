@@ -1,0 +1,46 @@
+{
+  "id": 24,
+  "sku": "DLL-XPS13-9340",
+  "name": "Dell XPS 13 (9340)",
+  "shortDescription": "Compact premium laptop with Intel Core Ultra and slim InfinityEdge display.",
+  "description": "Dell XPS 13 offers premium build quality, modern Intel Core Ultra performance, and excellent portability for work and study.",
+  "categoryIds": [
+    "laptops",
+    "computers",
+    "components"
+  ],
+  "brand": "Dell",
+  "price": 1299.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 11,
+  "weightKg": 1.19,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.6,
+    "count": 410
+  },
+  "comments": [
+    {
+      "name": "Nikola",
+      "rating": 5,
+      "text": "Very premium and fast for daily work.",
+      "date": "2026-03-01"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p024/thumb.jpg",
+    "main": "techware-api/imgs/p024/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p024/g1.jpg"
+    ]
+  },
+  "specs": {
+    "CPU": "Intel Core Ultra 7",
+    "RAM": "16GB LPDDR5x",
+    "Storage": "512GB NVMe SSD",
+    "Display": "13.4\" 1920x1200",
+    "Ports": "2x Thunderbolt 4"
+  }
+}

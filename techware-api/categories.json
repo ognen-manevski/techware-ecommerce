@@ -1,0 +1,22 @@
+[
+  { "id": "computers", "name": "Computers" },
+  { "id": "laptops", "name": "Laptops" },
+  { "id": "phones", "name": "Phones" },
+  { "id": "tablets", "name": "Tablets" },
+
+  { "id": "keyboards", "name": "Keyboards" },
+  { "id": "mice", "name": "Mice" },
+  { "id": "monitors", "name": "Monitors" },
+  { "id": "audio", "name": "Audio" },
+
+  { "id": "storage", "name": "Storage" },
+  { "id": "components", "name": "Components" },
+
+  { "id": "accessories", "name": "Accessories" },
+  { "id": "charging", "name": "Charging" },
+  { "id": "cables", "name": "Cables" },
+
+  { "id": "gaming", "name": "Gaming" },
+  { "id": "networking", "name": "Networking" },
+  { "id": "smart-home", "name": "Smart Home" }
+]

@@ -1,0 +1,43 @@
+{
+  "id": 19,
+  "sku": "TPL-DECOXE75-3PK",
+  "name": "TP-Link Deco XE75 (3-Pack)",
+  "shortDescription": "Tri-band Wi-Fi 6E mesh system for large homes and many devices.",
+  "description": "Deco XE75 provides whole-home mesh coverage with a 6GHz band, simple app setup, and reliable roaming.",
+  "categoryIds": [
+    "networking",
+    "smart-home"
+  ],
+  "brand": "TP-Link",
+  "price": 399.99,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": true,
+  "stock": 17,
+  "weightKg": 2.1,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.5,
+    "count": 602
+  },
+  "comments": [
+    {
+      "name": "Darko",
+      "rating": 5,
+      "text": "Huge coverage improvement across all floors.",
+      "date": "2026-02-21"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p019/thumb.jpg",
+    "main": "techware-api/imgs/p019/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "WiFiStandard": "Wi-Fi 6E",
+    "Bands": "2.4GHz + 5GHz + 6GHz",
+    "Coverage": "Up to 6700 sq ft",
+    "Ethernet": "3x Gigabit per unit",
+    "Management": "Deco mobile app"
+  }
+}

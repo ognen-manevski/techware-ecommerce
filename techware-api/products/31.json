@@ -1,0 +1,45 @@
+{
+  "id": 31,
+  "sku": "KEY-K2PRO-RGB",
+  "name": "Keychron K2 Pro",
+  "shortDescription": "Compact wireless mechanical keyboard with QMK/VIA customization.",
+  "description": "Keychron K2 Pro is a versatile 75% keyboard with hot-swappable options and strong cross-platform support.",
+  "categoryIds": [
+    "keyboards",
+    "cables"
+  ],
+  "brand": "Keychron",
+  "price": 119,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 35,
+  "weightKg": 0.99,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.6,
+    "count": 334
+  },
+  "comments": [
+    {
+      "name": "Katerina",
+      "rating": 5,
+      "text": "Solid build and smooth wireless switching.",
+      "date": "2026-02-16"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p031/thumb.jpg",
+    "main": "techware-api/imgs/p031/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p031/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Layout": "75%",
+    "Firmware": "QMK / VIA",
+    "Connectivity": "Bluetooth / USB-C",
+    "Backlight": "RGB",
+    "Battery": "4000mAh"
+  }
+}

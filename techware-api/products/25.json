@@ -1,0 +1,43 @@
+{
+  "id": 25,
+  "sku": "LEN-T14-G5",
+  "name": "Lenovo ThinkPad T14 Gen 5",
+  "shortDescription": "Business laptop with durable chassis and excellent keyboard.",
+  "description": "ThinkPad T14 Gen 5 is built for productivity with strong performance, enterprise reliability, and upgrade-friendly design.",
+  "categoryIds": [
+    "laptops",
+    "storage"
+  ],
+  "brand": "Lenovo",
+  "price": 1199,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 14,
+  "weightKg": 1.38,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 265
+  },
+  "comments": [
+    {
+      "name": "Stefan",
+      "rating": 4,
+      "text": "Reliable laptop with one of the best keyboards.",
+      "date": "2026-02-18"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p025/thumb.jpg",
+    "main": "techware-api/imgs/p025/main.jpg",
+    "gallery": []
+  },
+  "specs": {
+    "CPU": "Intel Core Ultra 5",
+    "RAM": "16GB DDR5",
+    "Storage": "512GB NVMe SSD",
+    "Display": "14\" WUXGA",
+    "Security": "Fingerprint reader + TPM"
+  }
+}

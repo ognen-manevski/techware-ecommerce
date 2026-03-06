@@ -1,0 +1,46 @@
+{
+  "id": 38,
+  "sku": "APL-IPADMINI-A17",
+  "name": "Apple iPad mini",
+  "shortDescription": "Compact high-performance tablet with support for Apple Pencil.",
+  "description": "iPad mini offers powerful performance in a compact form factor for reading, notes, and portable productivity.",
+  "categoryIds": [
+    "tablets",
+    "networking",
+    "smart-home"
+  ],
+  "brand": "Apple",
+  "price": 499,
+  "compareAtPrice": null,
+  "discountPercent": null,
+  "isNew": false,
+  "stock": 22,
+  "weightKg": 0.293,
+  "warrantyMonths": 12,
+  "rating": {
+    "rate": 4.7,
+    "count": 702
+  },
+  "comments": [
+    {
+      "name": "Tamara",
+      "rating": 5,
+      "text": "Perfect size and very smooth performance.",
+      "date": "2026-02-28"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p038/thumb.jpg",
+    "main": "techware-api/imgs/p038/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p038/g1.jpg"
+    ]
+  },
+  "specs": {
+    "Display": "8.3\" Liquid Retina",
+    "Processor": "A-series chip",
+    "Connectivity": "Wi-Fi 6",
+    "Storage": "128GB",
+    "PencilSupport": "Apple Pencil"
+  }
+}

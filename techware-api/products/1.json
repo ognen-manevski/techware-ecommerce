@@ -1,0 +1,52 @@
+{
+  "id": 1,
+  "sku": "NW-AU-HP-001",
+  "name": "Premium Headphones",
+  "shortDescription": "Noise-cancelling wireless headphones with deep bass and 40h battery.",
+  "description": "Premium over-ear wireless headphones featuring active noise cancellation, gaming low-latency mode and comfortable memory foam earcups.",
+  "categoryIds": [
+    "audio",
+    "accessories"
+  ],
+  "brand": "NovaWare",
+  "price": 249.99,
+  "compareAtPrice": 312.49,
+  "discountPercent": 20,
+  "isNew": false,
+  "stock": 18,
+  "weightKg": 0.235,
+  "warrantyMonths": 24,
+  "rating": {
+    "rate": 4.6,
+    "count": 89
+  },
+  "comments": [
+    {
+      "name": "Mila",
+      "rating": 5,
+      "text": "Amazing sound quality and battery life.",
+      "date": "2026-02-10"
+    },
+    {
+      "name": "Stefan",
+      "rating": 4,
+      "text": "ANC works really well for travel.",
+      "date": "2026-01-18"
+    }
+  ],
+  "images": {
+    "thumbnail": "techware-api/imgs/p001/thumb.jpg",
+    "main": "techware-api/imgs/p001/main.jpg",
+    "gallery": [
+      "techware-api/imgs/p001/g1.jpg",
+      "techware-api/imgs/p001/g2.jpg"
+    ]
+  },
+  "specs": {
+    "Connectivity": "Bluetooth 5.3",
+    "Battery": "Up to 40 hours",
+    "Charging": "USB-C fast charge",
+    "Noise Cancellation": "Active ANC",
+    "Microphone": "Dual noise-reduction mic"
+  }
+}
