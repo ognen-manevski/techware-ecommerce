@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "createdAt": "2024-03-15",
     "sku": "NW-AU-HP-001",
     "name": "Premium Headphones",
     "shortDescription": "Noise-cancelling wireless headphones with deep bass and 40h battery.",
@@ -24,6 +25,7 @@
   },
   {
     "id": 2,
+    "createdAt": "2024-06-20",
     "sku": "NW-LT-014",
     "name": "NovaBook Air 14",
     "shortDescription": "Ultra-thin 14\" laptop with Ryzen 7 and 16GB RAM.",
@@ -47,6 +49,7 @@
   },
   {
     "id": 3,
+    "createdAt": "2024-05-10",
     "sku": "NW-MN-27G",
     "name": "NovaView 27 Gaming Monitor",
     "shortDescription": "27\" QHD IPS monitor with 165Hz refresh rate.",
@@ -70,6 +73,7 @@
   },
   {
     "id": 4,
+    "createdAt": "2025-09-01",
     "sku": "KC-K8P-RGB",
     "name": "Keychron K8 Pro Wireless Mechanical Keyboard",
     "shortDescription": "Hot-swappable TKL mechanical keyboard with Bluetooth and QMK/VIA support.",
@@ -93,6 +97,7 @@
   },
   {
     "id": 5,
+    "createdAt": "2025-10-15",
     "sku": "LOG-GPX2-BLK",
     "name": "Logitech G PRO X SUPERLIGHT 2",
     "shortDescription": "Ultra-light esports mouse with HERO 2 sensor and LIGHTSPEED wireless.",
@@ -116,6 +121,7 @@
   },
   {
     "id": 6,
+    "createdAt": "2024-01-08",
     "sku": "SMS-990PRO-1TB",
     "name": "Samsung 990 PRO 1TB NVMe SSD",
     "shortDescription": "PCIe 4.0 M.2 SSD with high sequential read and write speeds.",
@@ -139,6 +145,7 @@
   },
   {
     "id": 7,
+    "createdAt": "2024-02-20",
     "sku": "ASUS-RTAX88U-PRO",
     "name": "ASUS RT-AX88U Pro",
     "shortDescription": "Dual-band Wi-Fi 6 router with 2.5G port and AiMesh support.",
@@ -162,6 +169,7 @@
   },
   {
     "id": 8,
+    "createdAt": "2025-11-05",
     "sku": "PH-HUE-A19-4PK",
     "name": "Philips Hue White and Color Ambiance A19 4-Pack",
     "shortDescription": "Smart color bulbs with Hue app control and voice assistant support.",
@@ -185,6 +193,7 @@
   },
   {
     "id": 9,
+    "createdAt": "2025-08-22",
     "sku": "SMS-GTABS9-11",
     "name": "Samsung Galaxy Tab S9 11\"",
     "shortDescription": "11-inch AMOLED tablet with Snapdragon 8 Gen 2 and S Pen included.",
@@ -208,6 +217,7 @@
   },
   {
     "id": 10,
+    "createdAt": "2024-04-18",
     "sku": "GGL-PIX8PRO-256",
     "name": "Google Pixel 8 Pro",
     "shortDescription": "Flagship Android phone with Tensor G3 and advanced AI camera features.",
@@ -231,6 +241,7 @@
   },
   {
     "id": 11,
+    "createdAt": "2024-07-30",
     "sku": "ANK-735-65W",
     "name": "Anker 735 Charger (Nano II 65W)",
     "shortDescription": "Compact GaN charger with 2x USB-C and 1x USB-A ports.",
@@ -254,6 +265,7 @@
   },
   {
     "id": 12,
+    "createdAt": "2024-09-14",
     "sku": "CBM-TB4-2M",
     "name": "Cable Matters Thunderbolt 4 Cable 2m",
     "shortDescription": "Thunderbolt 4 cable with 40Gbps bandwidth and 100W charging.",
@@ -277,6 +289,7 @@
   },
   {
     "id": 13,
+    "createdAt": "2025-12-01",
     "sku": "APL-MBA-M3-13",
     "name": "Apple MacBook Air 13-inch (M3)",
     "shortDescription": "Thin and light laptop with Apple M3 chip and all-day battery life.",
@@ -300,6 +313,7 @@
   },
   {
     "id": 14,
+    "createdAt": "2025-09-25",
     "sku": "APP-IP15-128",
     "name": "Apple iPhone 15",
     "shortDescription": "6.1-inch iPhone with A16 Bionic, USB-C, and 48MP main camera.",
@@ -323,6 +337,7 @@
   },
   {
     "id": 15,
+    "createdAt": "2024-01-17",
     "sku": "SMS-S24-256",
     "name": "Samsung Galaxy S24",
     "shortDescription": "Compact flagship Android phone with bright display and Galaxy AI features.",
@@ -346,6 +361,7 @@
   },
   {
     "id": 16,
+    "createdAt": "2025-10-05",
     "sku": "SON-WH1000XM5",
     "name": "Sony WH-1000XM5",
     "shortDescription": "Wireless noise-canceling headphones with premium comfort and sound.",
@@ -369,6 +385,7 @@
   },
   {
     "id": 17,
+    "createdAt": "2025-11-20",
     "sku": "LOG-MXK3S",
     "name": "Logitech MX Keys S",
     "shortDescription": "Low-profile wireless keyboard for productivity with smart backlighting.",
@@ -392,6 +409,7 @@
   },
   {
     "id": 18,
+    "createdAt": "2025-12-10",
     "sku": "WD-BLKSN770-2T",
     "name": "WD_BLACK SN770 2TB NVMe SSD",
     "shortDescription": "PCIe 4.0 NVMe SSD optimized for gaming and fast load times.",
@@ -415,6 +433,7 @@
   },
   {
     "id": 19,
+    "createdAt": "2025-11-30",
     "sku": "TPL-DECOXE75-3PK",
     "name": "TP-Link Deco XE75 (3-Pack)",
     "shortDescription": "Tri-band Wi-Fi 6E mesh system for large homes and many devices.",
@@ -438,6 +457,7 @@
   },
   {
     "id": 20,
+    "createdAt": "2024-03-08",
     "sku": "NIN-SWITCH-OLED",
     "name": "Nintendo Switch - OLED Model",
     "shortDescription": "Hybrid handheld/TV console with vivid 7-inch OLED screen.",
@@ -461,6 +481,7 @@
   },
   {
     "id": 21,
+    "createdAt": "2025-10-28",
     "sku": "BEL-BOOSTPRO3IN1",
     "name": "Belkin BoostCharge Pro 3-in-1 Magnetic Charger",
     "shortDescription": "3-in-1 stand charger for iPhone, Apple Watch, and AirPods.",
@@ -484,6 +505,7 @@
   },
   {
     "id": 22,
+    "createdAt": "2024-08-06",
     "sku": "BOS-QCUH-BLK",
     "name": "Bose QuietComfort Ultra Headphones",
     "shortDescription": "Premium wireless noise-cancelling headphones with immersive audio.",
@@ -507,6 +529,7 @@
   },
   {
     "id": 23,
+    "createdAt": "2024-05-22",
     "sku": "APL-AIRPODS-PRO2",
     "name": "Apple AirPods Pro (2nd generation)",
     "shortDescription": "True wireless earbuds with Adaptive Audio and USB-C charging case.",
@@ -531,6 +554,7 @@
   },
   {
     "id": 24,
+    "createdAt": "2026-01-15",
     "sku": "DLL-XPS13-9340",
     "name": "Dell XPS 13 (9340)",
     "shortDescription": "Compact premium laptop with Intel Core Ultra and slim InfinityEdge display.",
@@ -555,6 +579,7 @@
   },
   {
     "id": 25,
+    "createdAt": "2024-04-03",
     "sku": "LEN-T14-G5",
     "name": "Lenovo ThinkPad T14 Gen 5",
     "shortDescription": "Business laptop with durable chassis and excellent keyboard.",
@@ -578,6 +603,7 @@
   },
   {
     "id": 26,
+    "createdAt": "2026-01-22",
     "sku": "LG-27GP850B",
     "name": "LG UltraGear 27GP850-B",
     "shortDescription": "27-inch QHD Nano IPS monitor with 165Hz refresh rate.",
@@ -601,6 +627,7 @@
   },
   {
     "id": 27,
+    "createdAt": "2024-06-11",
     "sku": "DLL-U2723QE",
     "name": "Dell UltraSharp U2723QE",
     "shortDescription": "27-inch 4K IPS Black monitor with USB-C hub and ergonomic stand.",
@@ -624,6 +651,7 @@
   },
   {
     "id": 28,
+    "createdAt": "2024-02-14",
     "sku": "ASU-PA278QV",
     "name": "ASUS ProArt Display PA278QV",
     "shortDescription": "27-inch QHD monitor calibrated for color-accurate creative work.",
@@ -647,6 +675,7 @@
   },
   {
     "id": 29,
+    "createdAt": "2024-07-09",
     "sku": "SMS-ODYSSEY-G5-32",
     "name": "Samsung Odyssey G5 32-inch",
     "shortDescription": "Curved QHD monitor with high refresh rate for immersive play.",
@@ -670,6 +699,7 @@
   },
   {
     "id": 30,
+    "createdAt": "2026-02-05",
     "sku": "LOG-MX-KEYS-S",
     "name": "Logitech MX Keys S",
     "shortDescription": "Low-profile wireless keyboard for productivity across multiple devices.",
@@ -693,6 +723,7 @@
   },
   {
     "id": 31,
+    "createdAt": "2024-10-17",
     "sku": "KEY-K2PRO-RGB",
     "name": "Keychron K2 Pro",
     "shortDescription": "Compact wireless mechanical keyboard with QMK/VIA customization.",
@@ -716,6 +747,7 @@
   },
   {
     "id": 32,
+    "createdAt": "2024-08-29",
     "sku": "COR-K70-CORE",
     "name": "Corsair K70 CORE",
     "shortDescription": "Mechanical gaming keyboard with responsive switches and durable frame.",
@@ -739,6 +771,7 @@
   },
   {
     "id": 33,
+    "createdAt": "2025-12-18",
     "sku": "LOG-MXMASTER3S",
     "name": "Logitech MX Master 3S",
     "shortDescription": "Ergonomic wireless mouse with precision sensor and quiet clicks.",
@@ -762,6 +795,7 @@
   },
   {
     "id": 34,
+    "createdAt": "2024-11-12",
     "sku": "RAZ-DA-V3PRO",
     "name": "Razer DeathAdder V3 Pro",
     "shortDescription": "Ultra-light wireless esports mouse with Focus Pro optical sensor.",
@@ -785,6 +819,7 @@
   },
   {
     "id": 35,
+    "createdAt": "2024-03-25",
     "sku": "APL-MAGIC-MOUSE2",
     "name": "Apple Magic Mouse",
     "shortDescription": "Multi-touch wireless mouse with smooth gesture support for macOS.",
@@ -808,6 +843,7 @@
   },
   {
     "id": 36,
+    "createdAt": "2024-09-08",
     "sku": "STS-RIVAL3-WL",
     "name": "SteelSeries Rival 3 Wireless",
     "shortDescription": "Dual wireless gaming mouse with long battery life and responsive sensor.",
@@ -831,6 +867,7 @@
   },
   {
     "id": 37,
+    "createdAt": "2024-12-03",
     "sku": "MSC-SURFACE-P10",
     "name": "Microsoft Surface Pro 10",
     "shortDescription": "2-in-1 tablet-laptop with detachable keyboard and touchscreen display.",
@@ -855,6 +892,7 @@
   },
   {
     "id": 38,
+    "createdAt": "2024-10-30",
     "sku": "APL-IPADMINI-A17",
     "name": "Apple iPad mini",
     "shortDescription": "Compact high-performance tablet with support for Apple Pencil.",
@@ -879,6 +917,7 @@
   },
   {
     "id": 39,
+    "createdAt": "2024-05-16",
     "sku": "GGL-NESTWIFIPRO-3",
     "name": "Google Nest Wifi Pro (3-Pack)",
     "shortDescription": "Tri-band Wi-Fi 6E mesh routers for stable whole-home coverage.",
@@ -903,6 +942,7 @@
   },
   {
     "id": 40,
+    "createdAt": "2024-08-19",
     "sku": "SON-NWA306-32",
     "name": "Sony NW-A306 Walkman",
     "shortDescription": "Portable hi-res music player with expandable storage and Android OS.",
