@@ -6,6 +6,8 @@ export class CartItem {
         this.price = product.price;
         this.thumbnail = product.thumbnail;
         this.quantity = quantity;
+        // weight in kg — available when added from the product details page (ProductDetails model)
+        this.weight = product.weight ?? product.weightKg ?? null;
     }
 
     get lineTotal() {

@@ -125,9 +125,9 @@ h6 {
    Bootstrap Overrides
    ============================================================================ */
 
-  .navbar-brand:hover {
-    color: var(--primary-300) !important;
-  }
+.navbar-brand:hover {
+  color: var(--primary-300) !important;
+}
 
 .navbar-dark {
   background-color: var(--primary-500) !important;
@@ -393,7 +393,7 @@ img {
   }
 }
 
-.banner-image-stick img{
+.banner-image-stick img {
   padding-bottom: 0 !important;
   transform: translateY(2rem)
 }
@@ -420,8 +420,13 @@ img {
 
 
 @keyframes skeleton-shimmer {
-  0%   { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .dummy {
@@ -434,7 +439,7 @@ img {
   animation: skeleton-shimmer 2s infinite linear;
 }
 
-.dummy-card{
+.dummy-card {
   height: 400px;
   position: relative;
 }
@@ -473,4 +478,52 @@ img {
 .gallery-thumb.active-thumb {
   border-color: var(--primary-500);
   box-shadow: 0 0 0 3px hsla(244, 96%, 67%, 0.2);
+}
+
+
+/* ============================================================================
+   CHECKOUT PAGE
+   ============================================================================ */
+
+
+/* Step indicator circles */
+.step-circle {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  flex-shrink: 0;
+}
+
+.step-label {
+  font-size: 0.78rem;
+  margin-top: 0.35rem;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+
+/* Shipping method option cards */
+.shipping-option {
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.shipping-option:hover {
+  border-color: var(--bs-primary) !important;
+}
+
+.shipping-option.selected {
+  border-color: var(--bs-primary) !important;
+  background-color: var(--primary-50, #f0f0ff) !important;
+}
+
+/* Read-only review table rows */
+#review-items td,
+#confirm-items td {
+  vertical-align: middle;
 }

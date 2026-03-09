@@ -77,9 +77,9 @@ function render() {
                             <span>Total</span>
                             <span class="text-primary">${formatPrice(subtotal)}</span>
                         </div>
-                        <button class="btn btn-primary btn-lg w-100">
+                        <a href="checkout.html" class="btn btn-primary btn-lg w-100 text-decoration-none">
                             Proceed to Checkout
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
