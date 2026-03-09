@@ -25,14 +25,13 @@
     <nav class="navbar bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
         <div class="container">
             <a class="navbar-brand fw-normal" href="#">Axion Techware</a>
-            <button class="btn btn-outline-light position-relative d-flex align-items-center gap-2 p-2 my-2"
-                type="button">
+            <a href="./pages/cart.html" class="btn btn-outline-light position-relative d-flex align-items-center gap-2 p-2 my-2">
                 <div class="material-symbols-outlined fs-2">shopping_cart</div>
                 <div class="d-flex flex-column">
-                    <span class="badge bg-primary m-0">0</span>
+                    <span class="badge bg-primary m-0" id="cart-count">0</span>
                     <div class="small fw-semibold">Cart</div>
                 </div>
-            </button>
+            </a>
         </div>
     </nav>
 
@@ -55,19 +54,21 @@
                 <form class="d-flex flex-lg-nowrap flex-wrap gap-2 w-100 search-form mx-auto bg-light p-2 rounded"
                     role="search">
                     <div class="w-75 flex-grow-1">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                        <input class="form-control" id="searchInput" type="search" placeholder="Search"
+                            aria-label="Search" />
                     </div>
 
                     <div class="w-auto order-lg-last flex-grow-1">
-                        <button class="btn btn-primary w-100 d-flex align-items-center gap-1" type="submit">
+                        <button class="btn btn-primary w-100 d-flex align-items-center gap-1" type="button"
+                            id="searchBtn">
                             <span class="material-symbols-outlined fs-5">search</span>
                             Search
                         </button>
                     </div>
                     <!-- CATEGORIES -->
                     <div class="w-25 flex-grow-1">
-                        <select class="form-select">
-                            <option selected>All Categories</option>
+                        <select class="form-select" id="categoriesMenu">
+                            <option value="" selected>All Categories</option>
                             <option>Computers</option>
                             <option>Phones</option>
                             <option>Accessories</option>
@@ -75,11 +76,13 @@
                     </div>
                     <!-- FILTERS -->
                     <div class="w-25 flex-grow-1">
-                        <select class="form-select">
-                            <option selected>Newest</option>
-                            <option>Price: Low to High</option>
-                            <option>Price: High to Low</option>
-                            <option>Rating</option>
+                        <select class="form-select w-100" id="filtersMenu" placeholder="Sort By">
+                            <option value="" selected disabled class="d-none">Sort By</option>
+                            <option value="reset">None</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="rating">Rating</option>
                         </select>
                     </div>
                 </form>
@@ -89,196 +92,193 @@
         <!-- MAIN CONTENT -->
         <div class="container">
             <!-- PRODUCTS GRID SECTION -->
-            <section class="products-grid">
+            <section class="products-grid d-none" id="products-grid-section">
                 <!-- SEARCH TITLE -->
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-start mb-4">
-                    <h2 class="mb-4">4 Products found in Computers:</h2>
+                    <h2 class="mb-4" id="search-title">4 Products found in Computers:</h2>
+                    <h2 class="dummy mb-4">Lorem Ipsum Dolor</h2>
                     <div class="d-flex align-items-center gap-2 mb-4">
+                        <div class="dummy">Display As:</div>
+                        <div class="dummy fs-4">Grid</div>
+                        <div class="dummy fs-4">List</div>
                         <div class="text-muted">Display&nbsp;As:</div>
-                        <div class="btn btn-primary d-flex align-items-center gap-1">
+                        <div class="btn btn-primary d-flex align-items-center gap-1" id="display-grid">
                             <span class="material-symbols-outlined fs-5">border_all</span>
                             Grid
                         </div>
-                        <div class="btn btn-outline-primary d-flex align-items-center gap-1">
+                        <div class="btn btn-outline-primary d-flex align-items-center gap-1" id="display-table">
                             <span class="material-symbols-outlined fs-5">menu</span>
                             List
                         </div>
                     </div>
                 </div>
                 <!-- RESULTS DIV -->
-                <div id="home-results" class="row g-3 mb-5">
-                    <!-- EXAMPLE CARDS -->
-                    <!-- PRODUCT CARD 1: REGULAR -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="position-relative">
-                                <img src="https://via.placeholder.com/250x200?text=Laptop" class="card-img-top"
-                                    alt="Product">
-                                <span class="badge bg-info position-absolute top-2 start-2">New</span>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Wireless Laptop</h5>
-                                <p class="card-text text-muted small">High-performance laptop for professionals</p>
-                                <div class="mb-3">
-                                    <span class="text-warning">★★★★★</span>
-                                    <span class="text-muted small">(52 reviews)</span>
-                                </div>
-                                <div class="mb-3">
-                                    <span class="badge bg-secondary me-2">Electronics</span>
-                                    <span class="badge bg-light text-dark">Computers</span>
-                                </div>
-                                <h6 class="text-primary mb-3">$1,299.99</h6>
-                                <div class="d-flex gap-2 mt-auto">
-                                    <button class="btn btn-primary flex-grow-1">Add to Cart</button>
-                                    <button class="btn btn-outline-primary">
-                                        <span class="material-symbols-outlined">open_in_new</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                <div class="pagination-bar mb-3"></div>
+                <div id="home-results" class="row g-3 mb-3">
+                    <!-- SEARCH RESULT CARDS WILL GO HERE-->
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
                     </div>
-                    <!-- PRODUCT CARD 2: NEW (with badge styling) -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100 border-warning">
-                            <div class="position-relative">
-                                <img src="https://via.placeholder.com/250x200?text=Smartphone" class="card-img-top"
-                                    alt="Product">
-                                <span class="badge bg-info position-absolute top-2 start-2">NEW</span>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Latest Smartphone</h5>
-                                <p class="card-text text-muted small">5G enabled flagship phone</p>
-                                <div class="mb-3">
-                                    <span class="text-warning">★★★★☆</span>
-                                    <span class="text-muted small">(127 reviews)</span>
-                                </div>
-                                <div class="mb-3">
-                                    <span class="badge bg-secondary me-2">Electronics</span>
-                                    <span class="badge bg-light text-dark">Phones</span>
-                                </div>
-                                <h6 class="text-primary mb-3">$899.99</h6>
-                                <div class="d-flex gap-2 mt-auto">
-                                    <button class="btn btn-primary flex-grow-1">Add to Cart</button>
-                                    <button class="btn btn-outline-primary">
-                                        <span class="material-symbols-outlined">open_in_new</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
                     </div>
-                    <!-- PRODUCT CARD 3: PROMO (with sale badge) -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card card-sale h-100">
-                            <div class="card-bg"></div>
-                            <!-- img  -->
-                            <div class="position-relative overflow-hidden">
-                                <img src="./images/450-test.jpg" class="card-img-top" alt="Product">
-                                <div class="sale-badge">
-                                    50%<span>OFF</span>
-                                </div>
-                                <div class="new-badge">
-                                    <span>NEW ★</span>
-                                </div>
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Premium Headphones</h5>
-                                <p class="card-text text-muted small">Noise-cancelling wireless headphones</p>
-                                <!-- chips  -->
-                                <div class="mb-3">
-                                    <div class="badge bg-secondary text-dark">Audio</div>
-                                    <div class="badge bg-primary ">Accessories</div>
-                                </div>
-                                <div class="mb-3 d-flex justify-content-between align-items-end gap-2">
-                                    <!-- stars  -->
-                                    <div class="stars text-dark">
-                                        <span class="">★★★★★</span>
-                                        <span class="text-muted small">(89 reviews)</span>
-                                    </div>
-                                    <!-- prices  -->
-                                    <div class="text-end">
-                                        <small class="text-muted"><s>$399.99</s></small>
-                                        <h6 class="text-primary mb-0">$249.99</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex gap-2 mt-auto">
-                                    <button class="btn btn-primary flex-grow-1">
-                                        Add to Cart
-                                    </button>
-                                    <button class="btn btn-outline-primary d-flex gap-1 align-items-center
-                                    justify-content-center view-more-btn">
-                                        <div class="view-more-txt">
-                                            View
-                                        </div>
-                                        <div class="material-symbols-outlined">arrow_outward</div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
                     </div>
-                    <!-- PRODUCT CARD 4: REGULAR -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            <div class="position-relative">
-                                <img src="https://via.placeholder.com/250x200?text=Tablet" class="card-img-top"
-                                    alt="Product">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Digital Tablet</h5>
-                                <p class="card-text text-muted small">Portable tablet for work and entertainment</p>
-                                <div class="mb-3">
-                                    <span class="text-warning">★★★☆☆</span>
-                                    <span class="text-muted small">(34 reviews)</span>
-                                </div>
-                                <div class="mb-3">
-                                    <span class="badge bg-secondary me-2">Electronics</span>
-                                    <span class="badge bg-light text-dark">Computing</span>
-                                </div>
-                                <h6 class="text-primary mb-3">$599.99</h6>
-                                <div class="d-flex gap-2 mt-auto">
-                                    <button class="btn btn-primary flex-grow-1">Add to Cart</button>
-                                    <button class="btn btn-outline-primary">
-                                        <span class="material-symbols-outlined">open_in_new</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
                     </div>
-                    <!-- EXAMPLE CARDS END-->
+                </div>
+                <div id="home-results-list" class="row g-3 mb-3 d-none">
+                    <!-- SEARCH RESULT LIST WILL GO HERE-->
+                </div>
+                <div class="pagination-bar mt-3 mb-5"></div>
+            </section>
+
+            <!-- PROMO PRODUCTS -->
+            <section class="products-grid">
+                <h2 class="fw-bold fs-2">Hot Deals</h2>
+                <p class="lead mb-4 fs-3">Save big on selected tech gear</p>
+                <div id="home-promo-results" class="row g-3 mb-5">
+                    <!-- skeleton cards shown while data loads -->
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
                 </div>
             </section>
+
+            <!-- BANNER CAROUSEL -->
+            <section class="mb-5">
+                <div id="promoBannerCarousel" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel"
+                    data-bs-interval="5000">
+
+                    <!-- Indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <section class="promo-banner text-white px-5 pt-5 rounded">
+                                <div class="d-flex flex-column flex-md-row gap-md-5 gap-1 align-items-center">
+                                    <div class="banner-bg">
+                                        <img src="./images/carousel/slide-1/bg.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <h2 class="fw-bold mb-2 fs-1">Upgrade Your Tech Today!</h2>
+                                        <p class="lead mb-0 fs-4">
+                                            Shop our exclusive deals on the latest technology products and elevate your
+                                            digital lifestyle.
+                                        </p>
+                                    </div>
+                                    <div class="banner-image text-center">
+                                        <img src="./images/carousel/slide-1/prod.png" alt="">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <section class="promo-banner text-dark px-5 pt-5 rounded">
+                                <div class="d-flex flex-column flex-md-row gap-md-5 gap-1 align-items-center">
+                                    <div>
+                                        <div class="banner-bg">
+                                            <img src="./images/carousel/slide-2/bg.jpg" alt="">
+                                        </div>
+                                        <h2 class="fw-bold mb-2 fs-1">Stay Connected Anywhere</h2>
+                                        <p class="lead mb-4 fs-4">
+                                            Explore the newest smartphones with advanced cameras, lightning-fast processors, and sleek designs built for everyday life.
+                                        </p>
+                                        <button type="button" class="btn btn-dark fs-5">Shop Smartphones</button>
+                                    </div>
+                                    <div class="banner-image banner-image-stick">
+                                        <img src="./images/carousel/slide-2/prod.png" alt="">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <section class="promo-banner text-dark px-5 pt-5 rounded">
+                                <div class="d-flex flex-column flex-md-row gap-md-5 gap-1 align-items-center">
+                                    <div class="banner-bg"
+                                        style="background: linear-gradient(to right, lightgray, white)">
+                                    </div>
+                                    <div>
+                                        <h2 class="fw-bold mb-2 fs-1">Build Your Dream Setup</h2>
+                                        <p class="lead mb-4 fs-4">
+                                            From graphics cards to high-performance cases, find everything you need to
+                                            build or upgrade your ultimate gaming PC.
+                                        </p>
+                                        <button type="button" class="btn btn-primary fs-5">Shop Components</button>
+                                    </div>
+                                    <div class="banner-image">
+                                        <img src="./images/carousel/slide-3/product.jpg" alt=""
+                                            class="rounded radius-3">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                    <!-- Slides end -->
+
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#promoBannerCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#promoBannerCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+
+                </div>
+            </section>
+
+            <!-- NEW PRODUCTS -->
+            <section class="products-grid">
+                <h2 class="fw-bold fs-2">New Arrivals</h2>
+                <p class="lead mb-4 fs-3">Discover the latest additions to our store</p>
+                <div id="home-new-results" class="row g-3 mb-5">
+                    <!-- skeleton cards shown while data loads -->
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                    <div class="dummy-card col-md-6 col-lg-3">
+                        <div class="dummy"></div>
+                    </div>
+                </div>
+            </section>
+
         </div>
-        <!-- searched products end -->
-
-        <!-- REMAINING NOTES - LEAVE FOR LATER -->
-        <!-- NEW products section -->
-        <!-- title -->
-        <!-- 3-4 products cards  -->
-        <!-- new cards have :
-            - new badge over image (absolute rectangle)
-            - animated yellow gold gradient border with slow movement
-            - glows on hover (same border just blurred and with increased opacity)
-            - card hover effect: move up a little and scale maybe
-           -->
-        <!-- NEW products section  end-->
-
-        <!-- promo banner with some text and a call to action button -->
-
-        <!-- products on PROMOTION section -->
-        <!-- title -->
-        <!-- 3-4 product cards on promotion -->
-        <!-- promotion cards have a:
-            - infinitely rotating rainbow gradient border
-            - glows on hover (same border just blurred and with increased opacity)
-            - card hover effect: move up a little and scale maybe
-            - discounted price and original price with strikethough
-            - ON SALE badge 45deg top corner
-                        -->
-        <!-- products on PROMOTION section end -->
-
-        <!-- section end -->
-
-
-        <!-- main section end -->
     </main>
 
     <!-- footer  -->
@@ -355,7 +355,8 @@
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
     </script>
-    <!-- <script src="./main.js"></script> -->
+    <!-- main js-->
+    <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>

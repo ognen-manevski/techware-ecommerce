@@ -1,94 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart - ShopHub</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Cart — Axion Techware</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
 </head>
+
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <i class="fas fa-shopping-bag"></i>
-                <span>ShopHub</span>
-            </div>
-            <nav class="nav-links">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="../index.html#products" class="nav-link">Shop</a>
-                <a href="cart.html" class="nav-link active">
-                    <i class="fas fa-shopping-cart"></i>
-                    Cart
-                    <span class="cart-badge">0</span>
-                </a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Cart Section -->
-    <main class="cart-section">
-        <div class="cart-container">
-            <h1>Shopping Cart</h1>
-
-            <div class="cart-layout">
-                <!-- Cart Items Column -->
-                <div class="cart-items-column">
-                    <div class="cart-items" id="cartItems">
-                        <!-- Dynamically populated -->
-                    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand fw-normal" href="../index.html">Axion Techware</a>
+            <a href="cart.html" class="btn btn-outline-light position-relative d-flex align-items-center gap-2 p-2 my-2">
+                <div class="material-symbols-outlined fs-2">shopping_cart</div>
+                <div class="d-flex flex-column">
+                    <span class="badge bg-primary m-0" id="cart-count">0</span>
+                    <div class="small fw-semibold">Cart</div>
                 </div>
+            </a>
+        </div>
+    </nav>
 
-                <!-- Cart Summary Column -->
-                <aside class="cart-summary">
-                    <div class="summary-box" id="cartSummary">
-                        <!-- Dynamically populated with totals -->
-                    </div>
+    <main class="my-5" style="min-height: 70vh;">
+        <div class="container">
 
-                    <button class="btn-checkout" id="proceedCheckoutBtn">
-                        Proceed to Checkout
-                    </button>
+            <h1 class="fs-2 fw-bold mb-4">Your Cart</h1>
 
-                    <a href="../index.html#products" class="btn-continue-shopping">
-                        <i class="fas fa-arrow-left"></i>
-                        Continue Shopping
-                    </a>
-                </aside>
+            <div id="cart-container">
+                <!-- Rendered by cart.js -->
             </div>
+
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About ShopHub</h3>
-                <p>Your trusted online shopping destination for quality products and great prices.</p>
+    <!-- FOOTER -->
+    <footer class="footer mt-5 py-5 text-light">
+        <div class="container">
+
+            <div class="mb-4">
+                <a class="navbar-brand fw-normal" href="../index.html">Axion Techware</a>
             </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../index.html#products">Shop</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
+
+            <hr class="bg-secondary my-4">
+
+            <div class="d-flex justify-content-between mb-4 flex-wrap flex-md-nowrap gap-4">
+                <div class="w-50">
+                    <h5 class="text-white mb-2">About Us</h5>
+                    <p>Axion Techware is your one-stop shop for the latest technology products at competitive prices.</p>
+                </div>
+                <div class="w-50 d-none d-lg-block"></div>
+                <div class="w-50 text-md-end text-start flex-grow-1">
+                    <h5 class="text-white mb-2">Subscribe to Our Newsletter</h5>
+                    <div>
+                        <div>Stay updated with our latest news and offers.</div>
+                        <form class="d-flex ms-0 ms-md-auto gap-2 mt-2" role="search" style="max-width: 46ch;">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: support@shophub.com</p>
-                <p>Phone: 1-800-SHOP-HUB</p>
+
+            <hr class="bg-secondary my-4">
+
+            <div class="d-flex flex-wrap flex-md-nowrap justify-content-between gap-4 text-md-start text-center">
+                <div class="w-100 w-md-auto flex-grow-1">
+                    Email:
+                    <a href="mailto:info@axiontechware.com" class="text-light text-decoration-none">info@axiontechware.com</a>
+                    <span class="px-md-3"> | </span>
+                    <a href="mailto:orders@axiontechware.com" class="text-light text-decoration-none">orders@axiontechware.com</a>
+                </div>
+                <div class="d-flex gap-2 mx-auto mx-md-0">
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="btn btn-sm btn-outline-light rounded-circle"><i class="bi bi-youtube"></i></a>
+                </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 ShopHub. All rights reserved.</p>
+
+            <hr class="bg-secondary my-4">
+
+            <div class="text-center small">
+                <p>&copy; 2026 Axion Techware. All rights reserved.</p>
+            </div>
+
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
     <script type="module" src="../js/pages/cart.js"></script>
+
 </body>
+
 </html>

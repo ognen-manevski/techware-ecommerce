@@ -1,132 +1,155 @@
-/**
- * Shopping Cart Page Script
- * Handles cart display, quantity updates, and item removal
- */
+import { getItems, getSubtotal, removeItem, updateQty, clearCart, updateCartBadge } from '../services/cartService.js';
+import { formatPrice } from '../utils/formatters.js';
 
-import { cartService } from '../services/cartService.js';
-import { renderCartItems, renderCartSummary, updateCartBadge, showToast } from '../utils/render.js';
-
-// DOM Elements
-const cartItemsContainer = document.getElementById('cartItems');
-const cartSummaryContainer = document.getElementById('cartSummary');
-const proceedCheckoutBtn = document.getElementById('proceedCheckoutBtn');
-const cartBadge = document.querySelector('.cart-badge');
-
-/**
- * Initialize cart page
- */
-async function init() {
-  try {
-    // Load cart from storage
-    await cartService.loadFromStorage();
-
-    // Initial render
-    renderCart();
-
-    // Setup event listeners
-    setupEventListeners();
-
-    // Listen for cart changes (in case cart was modified in another tab)
-    window.addEventListener('cartChanged', renderCart);
-  } catch (error) {
-    console.error('Error initializing cart page:', error);
-    showToast('Error loading cart', 'error');
-  }
+// Images in JSON are root-relative; this page lives in /pages/
+function imgSrc(src) {
+    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
+    return `../${src}`;
 }
 
-/**
- * Render cart items and summary
- */
-function renderCart() {
-  const items = cartService.getItems();
-  const summary = cartService.getOrderSummary();
+function render() {
+    updateCartBadge();
+    const items = getItems();
+    const container = document.getElementById('cart-container');
 
-  renderCartItems(items, cartItemsContainer);
-  renderCartSummary(summary, cartSummaryContainer);
-  updateCartBadge(cartService.getItemCount());
-
-  // Attach event listeners to dynamically rendered elements
-  attachCartEventListeners();
-
-  // Update checkout button state
-  proceedCheckoutBtn.disabled = cartService.isEmpty();
-}
-
-/**
- * Attach event listeners to cart items
- */
-function attachCartEventListeners() {
-  // Remove buttons
-  document.querySelectorAll('.btn-remove').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const productId = parseInt(btn.dataset.productId);
-      cartService.removeItem(productId);
-      showToast('Item removed from cart', 'info');
-      renderCart();
-    });
-  });
-
-  // Quantity decrease buttons
-  document.querySelectorAll('.btn-qty-decrease').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const productId = parseInt(btn.dataset.productId);
-      const item = cartService.getItems().find(i => i.product.id === productId);
-      if (item) {
-        item.decrement();
-        cartService.saveToStorage();
-        cartService.emitChange();
-        renderCart();
-      }
-    });
-  });
-
-  // Quantity increase buttons
-  document.querySelectorAll('.btn-qty-increase').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const productId = parseInt(btn.dataset.productId);
-      const item = cartService.getItems().find(i => i.product.id === productId);
-      if (item) {
-        item.increment();
-        cartService.saveToStorage();
-        cartService.emitChange();
-        renderCart();
-      }
-    });
-  });
-
-  // Quantity input fields
-  document.querySelectorAll('.qty-input').forEach(input => {
-    input.addEventListener('change', (e) => {
-      const productId = parseInt(input.dataset.productId);
-      let quantity = parseInt(e.target.value);
-
-      // Validate quantity
-      if (isNaN(quantity) || quantity < 1) {
-        quantity = 1;
-      }
-
-      const item = cartService.getItems().find(i => i.product.id === productId);
-      if (item && quantity <= item.product.stock) {
-        cartService.updateQuantity(productId, quantity);
-        renderCart();
-      } else {
-        e.target.value = item.quantity; // Reset if invalid
-        showToast('Invalid quantity', 'error');
-      }
-    });
-  });
-}
-
-/**
- * Setup event listeners
- */
-function setupEventListeners() {
-  proceedCheckoutBtn.addEventListener('click', () => {
-    if (!cartService.isEmpty()) {
-      window.location.href = 'checkout.html';
+    if (!items.length) {
+        container.innerHTML = `
+            <div class="text-center py-5">
+                <div class="material-symbols-outlined fs-1 text-muted mb-3">shopping_cart</div>
+                <h2 class="fs-4 text-muted">Your cart is empty</h2>
+                <a href="../index.html" class="btn btn-primary mt-3">Continue Shopping</a>
+            </div>`;
+        return;
     }
-  });
+
+    const subtotal = getSubtotal();
+
+    container.innerHTML = `
+        <div class="row g-4 align-items-start">
+
+            <!-- ITEMS LIST -->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <table class="table table-hover mb-0 align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width:5%"></th>
+                                    <th>Product</th>
+                                    <th class="text-center" style="width:15%">Qty</th>
+                                    <th class="text-end" style="width:15%">Price</th>
+                                    <th style="width:5%"></th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-items">
+                                ${items.map(renderRow).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="../index.html" class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2">
+                        <span class="material-symbols-outlined fs-6 align-middle">arrow_back</span>
+                        Continue Shopping
+                    </a>
+                    <button class="btn btn-outline-danger d-flex align-items-center justify-content-center gap-2" id="clear-cart-btn">
+                        <span class="material-symbols-outlined fs-6 align-middle">delete</span>
+                        Clear Cart
+                    </button>
+                </div>
+            </div>
+
+            <!-- ORDER SUMMARY -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="fs-5 fw-bold mb-4">Order Summary</h2>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Subtotal</span>
+                            <span>${formatPrice(subtotal)}</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="text-muted">Shipping</span>
+                            <span class="text-muted small fst-italic">Calculated at checkout</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+                            <span>Total</span>
+                            <span class="text-primary">${formatPrice(subtotal)}</span>
+                        </div>
+                        <button class="btn btn-primary btn-lg w-100">
+                            Proceed to Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>`;
+
+    setupEvents();
 }
 
-// Initialize on page load
-init();
+function renderRow(item) {
+    const lineTotal = item.price * item.quantity;
+    return `
+        <tr data-sku="${item.sku}">
+            <td class="ps-3">
+                <img src="${imgSrc(item.thumbnail)}" alt="${item.name}"
+                     style="width:56px;height:56px;object-fit:contain;">
+            </td>
+            <td>
+                <div class="fw-semibold">${item.name}</div>
+                <div class="text-muted small">${item.brand}</div>
+                <div class="text-primary small">${item.formattedPrice} each</div>
+            </td>
+            <td class="text-center">
+                <div class="d-flex align-items-center justify-content-center gap-1">
+                    <button class="btn btn-sm btn-outline-secondary qty-btn" data-action="dec" data-sku="${item.sku}">−</button>
+                    <span class="px-2 fw-semibold">${item.quantity}</span>
+                    <button class="btn btn-sm btn-outline-secondary qty-btn" data-action="inc" data-sku="${item.sku}">+</button>
+                </div>
+            </td>
+            <td class="text-end fw-semibold">${item.formattedLineTotal}</td>
+            <td class="text-end pe-3">
+                <button class="btn btn-sm btn-outline-danger remove-btn d-flex align-items-center justify-content-center" style="height:2rem;" data-sku="${item.sku}">
+                    <span class="material-symbols-outlined" style="font-size:1rem;">close</span>
+                </button>
+            </td>
+        </tr>`;
+}
+
+function setupEvents() {
+    document.querySelectorAll('.qty-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const sku = btn.dataset.sku;
+            const item = getItems().find(i => i.sku === sku);
+            if (!item) return;
+            updateQty(sku, btn.dataset.action === 'inc' ? item.quantity + 1 : item.quantity - 1);
+            render();
+        });
+    });
+
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            removeItem(btn.dataset.sku);
+            render();
+        });
+    });
+
+    document.getElementById('clear-cart-btn')?.addEventListener('click', () => {
+        clearCart();
+        render();
+    });
+
+    // Row click → product details (ignore qty/remove button clicks)
+    document.querySelectorAll('#cart-items tr[data-sku]').forEach(row => {
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', (e) => {
+            if (e.target.closest('.qty-btn, .remove-btn')) return;
+            window.location.href = `product-details.html?sku=${encodeURIComponent(row.dataset.sku)}`;
+        });
+    });
+}
+
+render();
+

@@ -125,6 +125,10 @@ h6 {
    Bootstrap Overrides
    ============================================================================ */
 
+  .navbar-brand:hover {
+    color: var(--primary-300) !important;
+  }
+
 .navbar-dark {
   background-color: var(--primary-500) !important;
   padding: 1rem 0;
@@ -330,4 +334,143 @@ h6 {
   to {
     --angle: 360deg;
   }
+}
+
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-card-img {
+  padding: 1rem;
+  aspect-ratio: 1/1;
+}
+
+/* star rating  */
+.txt-stars {
+  color: transparent;
+  /* modified with js inline */
+  background: linear-gradient(to right,
+      black var(--fill, 0%),
+      lightgray var(--fill, 0%));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+.product-card {
+  cursor: pointer;
+}
+
+.banner-image {
+  width: 100%;
+  height: 400px;
+  padding: 2rem;
+  overflow: hidden;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.banner-image img {
+  width: 400px;
+  height: 400px;
+  object-position: center;
+}
+
+@media (max-width: 768px) {
+  .banner-image {
+    height: 100%;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.banner-image-stick img{
+  padding-bottom: 0 !important;
+  transform: translateY(2rem)
+}
+
+.promo-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.dummy {
+  background: linear-gradient(90deg, hsl(0, 0%, 92%) 25%, hsl(0, 0%, 95%) 50%, hsl(0, 0%, 92%) 75%);
+  background-size: 200% 100%;
+  border-radius: var(--radius-sm);
+  color: transparent !important;
+  user-select: none;
+  pointer-events: none;
+  animation: skeleton-shimmer 2s infinite linear;
+}
+
+.dummy-card{
+  height: 400px;
+  position: relative;
+}
+
+.dummy-card .dummy {
+  position: absolute;
+  inset: 1rem;
+}
+
+/* ============================================================================
+   PRODUCT DETAILS PAGE
+   ============================================================================ */
+
+.gallery-thumb {
+  width: 80px;
+  height: 80px;
+  padding: 0.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: var(--radius-sm);
+  background: white;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-thumb:hover {
+  border-color: var(--primary-400);
+}
+
+.gallery-thumb.active-thumb {
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px hsla(244, 96%, 67%, 0.2);
 }
