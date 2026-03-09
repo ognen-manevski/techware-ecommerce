@@ -210,7 +210,7 @@
                             <button type="submit" class="btn btn-primary btn-lg px-5 d-flex align-items-center gap-2"
                                 id="next-step1-btn" disabled>
                                 Review Order
-                                <span class="material-symbols-outlined" style="font-size:1.15rem;">arrow_forward</span>
+                                <span class="material-symbols-outlined" style="transform: translateY(1px);">arrow_forward</span>
                             </button>
                         </div>
 
@@ -264,25 +264,32 @@
                                         <span id="review-subtotal">—</span>
                                     </div>
 
-                                    <!-- Shipping toggle (like product details page) -->
-                                    <div class="border rounded p-3 mb-3 bg-light">
-                                        <div class="d-flex justify-content-between align-items-center mb-2">
-                                            <span class="fw-semibold small">Add Shipping</span>
-                                            <div class="form-check form-switch mb-0">
-                                                <input class="form-check-input" type="checkbox" id="shipping-toggle"
-                                                    role="switch" checked>
-                                            </div>
-                                        </div>
-                                        <div id="shipping-details">
-                                            <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
-                                                <span class="text-muted small" id="shipping-method-label">—</span>
-                                                <span class="fw-semibold text-nowrap"
-                                                    id="shipping-cost-display">—</span>
-                                            </div>
-                                            <div class="text-muted" style="font-size:0.72rem;"
-                                                id="shipping-weight-note"></div>
-                                        </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span class="text-muted">Tax (18% incl.)</span>
+                                        <span id="review-tax" class="text-muted fst-italic">—</span>
                                     </div>
+
+                                    <!-- Shipping toggle (like product details page) -->
+                                    <div id="shipping-toggle-row">
+                                        <div class="border rounded p-3 mb-3 bg-light">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span class="fw-semibold small">Add Shipping</span>
+                                                <div class="form-check form-switch mb-0">
+                                                    <input class="form-check-input" type="checkbox" id="shipping-toggle"
+                                                        role="switch" checked>
+                                                </div>
+                                            </div>
+                                            <div id="shipping-details">
+                                                <div class="d-flex justify-content-between align-items-start gap-2 mb-1">
+                                                    <span class="text-muted small" id="shipping-method-label">—</span>
+                                                    <span class="fw-semibold text-nowrap"
+                                                        id="shipping-cost-display">—</span>
+                                                </div>
+                                                <div class="text-muted" style="font-size:0.72rem;"
+                                                    id="shipping-weight-note"></div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /shipping-toggle-row -->
 
                                     <hr>
 
@@ -294,7 +301,7 @@
                                     <button
                                         class="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center gap-2"
                                         id="place-order-btn">
-                                        <span class="material-symbols-outlined" style="font-size:1.15rem;">lock</span>
+                                        <span class="material-symbols-outlined fw-normal">lock</span>
                                         Place Order
                                     </button>
                                 </div>
@@ -306,7 +313,7 @@
                     <!-- Step 2 ← back -->
                     <div class="d-flex justify-content-start mt-4">
                         <button class="btn btn-outline-secondary d-flex align-items-center gap-2" id="back-step2-btn">
-                            <span class="material-symbols-outlined" style="font-size:1.15rem;">arrow_back</span>
+                            <span class="material-symbols-outlined" style="font: size 0.75rem;">arrow_back</span>
                             Back
                         </button>
                     </div>
@@ -346,6 +353,10 @@
                                     <div class="d-flex justify-content-between">
                                         <span class="text-muted">Subtotal</span>
                                         <span id="confirm-subtotal">—</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between mt-1">
+                                        <span class="text-muted">Tax (18% incl.)</span>
+                                        <span id="confirm-tax" class="text-muted fst-italic">—</span>
                                     </div>
                                     <div class="d-flex justify-content-between mt-1" id="confirm-shipping-row">
                                         <span class="text-muted">Shipping</span>
@@ -436,16 +447,6 @@
 
         </div>
     </footer>
-
-    <!--
-        ── EmailJS SDK (Bonus 2 — Order Confirmation Email) ──────────────────────
-        Setup instructions (see also checkout.js EMAILJS CONFIG section):
-        1. Create a free account at https://www.emailjs.com/
-        2. Add a service (Gmail, Outlook, etc.) → note the Service ID
-        3. Create an email template using the variables listed in checkout.js
-        4. Copy your Public Key from Account › API Keys
-        5. Fill in EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID in checkout.js
-    -->
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 

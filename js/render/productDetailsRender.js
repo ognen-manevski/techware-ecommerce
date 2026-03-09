@@ -1,5 +1,6 @@
-import { formatPrice } from '../utils/formatters.js';
+import { formatPrice, imgSrc } from '../utils/formatters.js';
 import { addItem, updateCartBadge } from '../services/cartService.js';
+import { showToast } from '../utils/toast.js';
 
 // Shipping cost tiers match shippingInfo from Product.js
 function getShippingCost(weight) {
@@ -7,13 +8,6 @@ function getShippingCost(weight) {
     if (weight < 0.5) return 4.99;  // standard mail
     if (weight < 5)   return 9.99;  // courier
     return 24.99;                    // freight
-}
-
-// Images in the JSON are root-relative (e.g. "techware-api/imgs/...").
-// This page lives one level deep in /pages/, so prepend ../
-function imgSrc(src) {
-    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
-    return `../${src}`;
 }
 
 export function renderProductDetails(product) {
@@ -80,7 +74,7 @@ function renderInfo(product) {
     return `
         <!-- Badges -->
         <div class="d-flex gap-2 mb-3 flex-wrap">
-            ${isOnSale ? `<span class="badge bg-danger fs-6">Sale${product.discountPercent ? ` — ${product.discountPercent}% OFF` : ''}</span>` : ''}
+            ${isOnSale ? `<span class="badge bg-danger fs-6">On Sale${product.discountPercent ? `: ${product.discountPercent}% OFF` : ''}</span>` : ''}
             ${product.isNew && !isOnSale ? `<span class="badge bg-success fs-6">New</span>` : ''}
             <span class="badge ${product.isInStock ? 'bg-primary' : 'bg-secondary'} fs-6">
                 ${product.isInStock ? `${product.stock} in stock` : 'Out of Stock'}
@@ -122,7 +116,7 @@ function renderInfo(product) {
                            ${shippingCost === null ? 'disabled' : ''}>
                     <label class="form-check-label fw-semibold" for="shipping-toggle">
                         Add Shipping
-                        <span class="text-muted fw-normal small ms-1">${product.shippingInfo}</span>
+                        ${shippingCost !== null ? `<span class="text-muted fw-normal small ms-1">+${formatPrice(shippingCost)}</span>` : ''}
                     </label>
                 </div>
                 <span class="text-muted" id="shipping-price-label" style="display: none;">
@@ -233,6 +227,7 @@ function setupAddToCart(product) {
     btn.addEventListener('click', () => {
         addItem(product);
         updateCartBadge();
+        showToast(`<strong>${product.name}</strong> added to cart`, 'success', 'shopping_cart');
         btn.textContent = ' Added!';
         btn.prepend((() => { const i = document.createElement('span'); i.className = 'material-symbols-outlined'; i.textContent = 'check'; return i; })());
         btn.disabled = true;

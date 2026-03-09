@@ -5,6 +5,7 @@ import { renderInitialProducts, renderProductCards } from "./render/productCard.
 import { setProducts } from "./render/pagination.js";
 import { LocalStorageService } from "./services/localStorageService.js";
 import { addItem, updateCartBadge } from "./services/cartService.js";
+import { showToast } from "./utils/toast.js";
 
 //initializing the app
 
@@ -175,6 +176,7 @@ document.addEventListener("click", (e) => {
     if (!product) return;
 
     addItem(product);
+    showToast(`<strong>${product.name}</strong> added to cart`, 'success', 'shopping_cart');
 
     // Brief visual feedback on the button
     btn.textContent = "Added!";

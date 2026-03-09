@@ -1,6 +1,12 @@
 import { getItems, getSubtotal, clearCart, updateCartBadge } from '../services/cartService.js';
 import { weightCategory } from '../utils/calculations.js';
-import { formatPrice } from '../utils/formatters.js';
+import { formatPrice, imgSrc } from '../utils/formatters.js';
+import { CONFIG } from '../config.js';
+import { sendConfirmationEmail } from '../services/emailService.js';
+import { Customer } from '../models/Customer.js';
+import { Address } from '../models/Address.js';
+import { Order } from '../models/Order.js';
+import { LocalStorageService } from '../services/localStorageService.js';
 
 // ─────────────────────────────────────────────────────────────────────────────
 // EMAILJS CONFIG — Bonus 2: Order Confirmation Email
@@ -18,24 +24,29 @@ import { formatPrice } from '../utils/formatters.js';
 //          {{price}}             – formatted line total (e.g. $19.99)
 //      {{/orders}}
 //      {{subtotal}}          – formatted subtotal
-//      {{shipping}}          – formatted shipping cost (or "Not included")
+//      {{tax}}               – formatted tax amount (18%)
+//      {{shipping}}          – formatted shipping cost, "Free (Local Pickup)", or "Not included"
 //      {{total}}             – formatted grand total
 //      {{shipping_address}}  – full delivery address string
 //      {{shipping_method}}   – chosen shipping method label (e.g. "Domestic")
 // 4. Go to Account › API Keys  →  copy your Public Key below
+// 5. Fill in EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID in js/config.js
 // ─────────────────────────────────────────────────────────────────────────────
-const EMAILJS_PUBLIC_KEY  = 'C9jorWqz8EbnXR9BG';   // ← replace
-const EMAILJS_SERVICE_ID  = 'service_8xisvll';   // ← replace
-const EMAILJS_TEMPLATE_ID = 'template_g3si0j9';  // ← replace
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Shipping methods  (keys match calculations.js distance parameter)
 // ─────────────────────────────────────────────────────────────────────────────
+const TAX_RATE = 0.18; // 18% included in prices — extracted for display only
+
+// Extracts the VAT already included in a price: amount × 0.18 / 1.18
+function extractTax(amount) { return amount * TAX_RATE / (1 + TAX_RATE); }
+
 const SHIPPING_METHODS = [
-    { id: 'sameCity',           label: 'Same City',     eta: '1–2 business days'   },
-    { id: 'sameCountry',        label: 'Domestic',      eta: '3–5 business days'   },
-    { id: 'neighboringCountry', label: 'Regional',      eta: '5–10 business days'  },
-    { id: 'international',      label: 'International', eta: '10–20 business days' },
+    { id: 'localPickup', label: 'Local Pickup', eta: 'Pick up in store', free: true },
+    { id: 'sameCity', label: 'Same City', eta: '1–2 business days' },
+    { id: 'sameCountry', label: 'Domestic', eta: '3–5 business days' },
+    { id: 'neighboringCountry', label: 'Regional', eta: '5–10 business days' },
+    { id: 'international', label: 'International', eta: '10–20 business days' },
 ];
 
 const DISTANCE_MULTIPLIERS = { sameCity: 1, sameCountry: 2, neighboringCountry: 3, international: 4 };
@@ -44,30 +55,60 @@ const DISTANCE_MULTIPLIERS = { sameCity: 1, sameCountry: 2, neighboringCountry: 
 // Wizard state
 // ─────────────────────────────────────────────────────────────────────────────
 let selectedShipping = 'sameCountry';
-let includeShipping  = true;
+let includeShipping = true;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Form draft persistence — saves/restores step-1 fields across navigation
+// ─────────────────────────────────────────────────────────────────────────────
+const DRAFT_KEY = 'checkoutDraft';
+
+function saveDraft() {
+    const form = document.getElementById('step1-form');
+    const get = id => form.querySelector(`#${id}`)?.value ?? '';
+    LocalStorageService.setItem(DRAFT_KEY, {
+        firstName: get('firstName'), lastName: get('lastName'),
+        email:     get('email'),     phone:    get('phone'),
+        street:    get('street'),    city:     get('city'),
+        state:     get('state'),     zip:      get('zip'),
+        country:   get('country'),
+        shippingMethod: selectedShipping,
+    });
+}
+
+function restoreDraft() {
+    const draft = LocalStorageService.getItem(DRAFT_KEY);
+    if (!draft) return;
+    const form = document.getElementById('step1-form');
+    const set = (id, val) => { const el = form.querySelector(`#${id}`); if (el && val) el.value = val; };
+    ['firstName','lastName','email','phone','street','city','state','zip','country']
+        .forEach(id => set(id, draft[id]));
+    if (draft.shippingMethod) selectedShipping = draft.shippingMethod;
+}
+
+function clearDraft() {
+    LocalStorageService.removeItem(DRAFT_KEY);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Helpers
 // ─────────────────────────────────────────────────────────────────────────────
 
-// Images in JSON are root-relative; pages/ subdir needs ../
-function imgSrc(src) {
-    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
-    return `../${src}`;
-}
-
 // Sum of (weight × qty) for all cart items. Returns null if any item has no weight.
+// weight is populated from data.weightKg for both the Product and ProductDetails models;
+// null means the API did not provide weightKg for that item — a fallback is used in calcShippingAmount.
 function getTotalWeight() {
     const items = getItems();
     if (!items.length || items.some(i => i.weight == null)) return null;
     return items.reduce((sum, i) => sum + i.weight * i.quantity, 0);
 }
 
-// Numeric shipping cost for a distance key. Falls back to 1 kg when weight is unknown.
-function calcShippingAmount(distanceKey) {
+// Numeric shipping cost for a method id. Returns 0 for Local Pickup.
+function calcShippingAmount(methodId) {
+    const method = SHIPPING_METHODS.find(m => m.id === methodId);
+    if (method?.free) return 0;
     const weight = getTotalWeight() ?? 1;
-    const base   = weightCategory(weight);
-    return base * (DISTANCE_MULTIPLIERS[distanceKey] ?? 1);
+    const base = weightCategory(weight);
+    return base * (DISTANCE_MULTIPLIERS[methodId] ?? 1);
 }
 
 function generateOrderNumber() {
@@ -80,7 +121,7 @@ function generateOrderNumber() {
 function updateStepIndicator(activeStep) {
     [1, 2, 3].forEach(n => {
         const circle = document.getElementById(`sc-${n}`);
-        const label  = document.getElementById(`sl-${n}`);
+        const label = document.getElementById(`sl-${n}`);
         circle.classList.remove('bg-primary', 'bg-success', 'bg-secondary');
         label.classList.remove('text-primary', 'text-success', 'text-muted', 'fw-semibold');
 
@@ -104,9 +145,9 @@ function updateStepIndicator(activeStep) {
 
     const line12 = document.getElementById('line-1-2');
     const line23 = document.getElementById('line-2-3');
-    line12.classList.toggle('border-success',   activeStep > 1);
+    line12.classList.toggle('border-success', activeStep > 1);
     line12.classList.toggle('border-secondary', activeStep <= 1);
-    line23.classList.toggle('border-success',   activeStep > 2);
+    line23.classList.toggle('border-success', activeStep > 2);
     line23.classList.toggle('border-secondary', activeStep <= 2);
 }
 
@@ -115,7 +156,7 @@ function updateStepIndicator(activeStep) {
 // ─────────────────────────────────────────────────────────────────────────────
 function renderShippingMethods() {
     const container = document.getElementById('shipping-methods-container');
-    const totalWt   = getTotalWeight();
+    const totalWt = getTotalWeight();
 
     // Weight note above the options
     const weightNote = document.getElementById('weight-info-note');
@@ -129,8 +170,9 @@ function renderShippingMethods() {
     }
 
     container.innerHTML = SHIPPING_METHODS.map(m => {
-        const cost   = calcShippingAmount(m.id);
+        const cost = calcShippingAmount(m.id);
         const active = m.id === selectedShipping;
+        const costLabel = m.free ? '<span class="text-success fw-bold">Free</span>' : `<span class="fw-bold text-nowrap">${formatPrice(cost)}</span>`;
         return `
             <div class="shipping-option border rounded p-3 mb-3 ${active ? 'selected' : ''}"
                  data-method="${m.id}" role="button" tabindex="0" aria-pressed="${active}">
@@ -144,7 +186,7 @@ function renderShippingMethods() {
                             <div class="fw-semibold">${m.label}</div>
                             <div class="text-muted small">${m.eta}</div>
                         </div>
-                        <span class="fw-bold text-nowrap">${formatPrice(cost)}</span>
+                        ${costLabel}
                     </label>
                 </div>
             </div>`;
@@ -171,15 +213,18 @@ function renderShippingMethods() {
 }
 
 function setupStep1() {
+    restoreDraft();        // restore saved fields before rendering so shippingMethod is correct
     renderShippingMethods();
 
-    const form    = document.getElementById('step1-form');
+    const form = document.getElementById('step1-form');
     const nextBtn = document.getElementById('next-step1-btn');
 
     // Enable "Review Order" button only when all required fields pass
     const checkValidity = () => { nextBtn.disabled = !form.checkValidity(); };
-    form.addEventListener('input',  checkValidity);
+    form.addEventListener('input', checkValidity);
     form.addEventListener('change', checkValidity);
+    form.addEventListener('input', saveDraft);
+    form.addEventListener('change', saveDraft);
     checkValidity(); // initial disabled state
 
     form.addEventListener('submit', e => {
@@ -194,11 +239,11 @@ function setupStep1() {
 // STEP 2 — Order Review
 // ─────────────────────────────────────────────────────────────────────────────
 function renderOrderReview() {
-    const items    = getItems();
+    const items = getItems();
     const subtotal = getSubtotal();
-    const method   = SHIPPING_METHODS.find(m => m.id === selectedShipping);
+    const method = SHIPPING_METHODS.find(m => m.id === selectedShipping);
     const shipCost = calcShippingAmount(selectedShipping);
-    const totalWt  = getTotalWeight();
+    const totalWt = getTotalWeight();
 
     // Read-only items table
     document.getElementById('review-items').innerHTML = items.map(item => `
@@ -218,28 +263,44 @@ function renderOrderReview() {
             <td class="text-end pe-3 fw-semibold">${item.formattedLineTotal}</td>
         </tr>`).join('');
 
-    // Address recap
+    // Address recap — build Customer + Address for display
     const form = document.getElementById('step1-form');
-    const get  = id => (form.querySelector(`#${id}`)?.value ?? '').trim();
-    const addrParts = [get('street'), get('city'), get('state'), get('zip'), get('country')].filter(Boolean);
+    const get = id => (form.querySelector(`#${id}`)?.value ?? '').trim();
+    const reviewCustomer = new Customer({ firstName: get('firstName'), lastName: get('lastName'), email: get('email'), phone: get('phone') });
+    const reviewAddress  = new Address({ street: get('street'), city: get('city'), state: get('state'), zip: get('zip'), country: get('country') });
     document.getElementById('review-address').textContent =
-        `${get('firstName')} ${get('lastName')} · ${addrParts.join(', ')}`;
+        `${reviewCustomer.fullName} · ${reviewAddress.formatted}`;
 
     // Subtotal
     document.getElementById('review-subtotal').textContent = formatPrice(subtotal);
 
-    // Shipping details
-    document.getElementById('shipping-method-label').textContent =
-        `${method?.label ?? '—'} (${method?.eta ?? ''})`;
-    document.getElementById('shipping-cost-display').textContent = formatPrice(shipCost);
-    document.getElementById('shipping-weight-note').textContent = totalWt != null
-        ? `Total weight: ${totalWt < 1 ? (totalWt * 1000).toFixed(0) + ' g' : totalWt.toFixed(2) + ' kg'}`
-        : 'Estimated weight used — exact data unavailable for some items.';
+    // Tax (extracted from subtotal, informational)
+    const tax = extractTax(subtotal);
+    document.getElementById('review-tax').textContent = formatPrice(tax);
 
-    // Sync shipping toggle
-    const toggle    = document.getElementById('shipping-toggle');
-    toggle.checked  = includeShipping;
-    toggle.onchange = () => { includeShipping = toggle.checked; updateReviewTotal(); };
+    // Shipping details
+    const isPickup = method?.free;
+    document.getElementById('shipping-method-label').textContent =
+        isPickup ? 'Local Pickup' : `${method?.label ?? '—'} (${method?.eta ?? ''})`;
+    document.getElementById('shipping-cost-display').textContent =
+        isPickup ? 'Free' : formatPrice(shipCost);
+    document.getElementById('shipping-weight-note').textContent = isPickup
+        ? 'No shipping charge — collect in store.'
+        : (totalWt != null
+            ? `Total weight: ${totalWt < 1 ? (totalWt * 1000).toFixed(0) + ' g' : totalWt.toFixed(2) + ' kg'}`
+            : 'Estimated weight used — exact data unavailable for some items.');
+
+    // Sync shipping toggle — hide for Local Pickup
+    const toggle = document.getElementById('shipping-toggle');
+    const toggleRow = document.getElementById('shipping-toggle-row');
+    if (isPickup) {
+        toggleRow.classList.add('d-none');
+        includeShipping = false;
+    } else {
+        toggleRow.classList.remove('d-none');
+        toggle.checked = includeShipping;
+        toggle.onchange = () => { includeShipping = toggle.checked; updateReviewTotal(); };
+    }
 
     updateReviewTotal();
 }
@@ -263,36 +324,36 @@ function placeOrder() {
     btn.disabled = true;
     btn.innerHTML = `<span class="spinner-border spinner-border-sm me-2" role="status"></span>Processing…`;
 
-    const form     = document.getElementById('step1-form');
-    const get      = id => (form.querySelector(`#${id}`)?.value ?? '').trim();
-    const items    = getItems();
+    const form = document.getElementById('step1-form');
+    const get = id => (form.querySelector(`#${id}`)?.value ?? '').trim();
+    const items = getItems();
     const subtotal = getSubtotal();
-    const method   = SHIPPING_METHODS.find(m => m.id === selectedShipping);
-    const shipCost = includeShipping ? calcShippingAmount(selectedShipping) : null;
-    const total    = subtotal + (shipCost ?? 0);
+    const tax = extractTax(subtotal);
+    const method = SHIPPING_METHODS.find(m => m.id === selectedShipping);
+    const shipCost = (method?.free || !includeShipping) ? null : calcShippingAmount(selectedShipping);
+    const total = subtotal + (shipCost ?? 0);
 
-    const order = {
-        orderNumber    : generateOrderNumber(),
-        customer       : {
-            firstName: get('firstName'),
-            lastName : get('lastName'),
-            email    : get('email'),
-            phone    : get('phone'),
-        },
-        address        : {
-            street : get('street'),
-            city   : get('city'),
-            state  : get('state'),
-            zip    : get('zip'),
-            country: get('country'),
-        },
-        shippingMethod : method,
-        items          : items.map(i => ({ sku: i.sku, name: i.name, brand: i.brand, price: i.price, thumbnail: i.thumbnail, quantity: i.quantity })),
+    const customer = new Customer({
+        firstName: get('firstName'), lastName: get('lastName'),
+        email:     get('email'),     phone:    get('phone'),
+    });
+    const address = new Address({
+        street: get('street'), city:    get('city'),
+        state:  get('state'),  zip:     get('zip'),
+        country: get('country'),
+    });
+    const order = new Order({
+        orderNumber:    generateOrderNumber(),
+        customer,
+        address,
+        shippingMethod: method,
+        items: items.map(i => ({ sku: i.sku, name: i.name, brand: i.brand, price: i.price, thumbnail: i.thumbnail, quantity: i.quantity })),
         subtotal,
-        shipping       : shipCost,
+        tax,
+        shipping: shipCost,
         total,
-        placedAt       : new Date().toISOString(),
-    };
+        placedAt: new Date().toISOString(),
+    });
 
     // Persist last order (shown on step 3 even after cart is cleared)
     localStorage.setItem('lastOrder', JSON.stringify(order));
@@ -300,7 +361,12 @@ function placeOrder() {
     // Send confirmation email (Bonus 2). Checkout proceeds regardless of email outcome.
     sendConfirmationEmail(order).finally(() => {
         clearCart();
-        renderConfirmation(order);
+        clearDraft();
+        try {
+            renderConfirmation(order);
+        } catch (err) {
+            console.error('[Checkout] renderConfirmation error:', err);
+        }
         goToStep(3);
     });
 }
@@ -309,11 +375,9 @@ function placeOrder() {
 // STEP 3 — Confirmation
 // ─────────────────────────────────────────────────────────────────────────────
 function renderConfirmation(order) {
-    const dateStr = new Date(order.placedAt).toLocaleDateString('en-US', { dateStyle: 'long' });
-
-    document.getElementById('confirm-heading').textContent  = 'Order Placed!';
-    document.getElementById('confirm-sub').textContent      =
-        `Order #${order.orderNumber} · ${dateStr}`;
+    document.getElementById('confirm-heading').textContent = 'Order Placed!';
+    document.getElementById('confirm-sub').textContent =
+        `Order #${order.orderNumber} · ${order.formattedDate}`;
     document.getElementById('confirm-email-note').innerHTML =
         `A confirmation has been sent to <span class="text-primary">${order.customer.email}</span>`;
 
@@ -334,80 +398,20 @@ function renderConfirmation(order) {
         </tr>`).join('');
 
     // Totals
-    document.getElementById('confirm-subtotal').textContent = formatPrice(order.subtotal);
+    document.getElementById('confirm-subtotal').textContent = order.formattedSubtotal;
+    document.getElementById('confirm-tax').textContent = order.formattedTax;
     const shipRow = document.getElementById('confirm-shipping-row');
     if (order.shipping != null) {
-        document.getElementById('confirm-shipping').textContent = formatPrice(order.shipping);
+        document.getElementById('confirm-shipping').textContent = order.formattedShipping;
         shipRow.classList.remove('d-none');
     } else {
         shipRow.classList.add('d-none');
     }
-    document.getElementById('confirm-total').textContent = formatPrice(order.total);
+    document.getElementById('confirm-total').textContent = order.formattedTotal;
 
     // Address
-    const addrParts = [
-        order.address.street, order.address.city,
-        order.address.state, order.address.zip, order.address.country,
-    ].filter(Boolean);
     document.getElementById('confirm-address').textContent =
-        `${order.customer.firstName} ${order.customer.lastName} · ${addrParts.join(', ')}`;
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// EmailJS — Bonus 2: send order confirmation email to the customer
-// ─────────────────────────────────────────────────────────────────────────────
-function sendConfirmationEmail(order) {
-    // Skip silently if EmailJS hasn't been configured yet
-    if (EMAILJS_PUBLIC_KEY === 'YOUR_PUBLIC_KEY') {
-        console.info(
-            '[EmailJS] Not configured — skipping confirmation email.\n' +
-            'Fill in EMAILJS_PUBLIC_KEY, EMAILJS_SERVICE_ID and EMAILJS_TEMPLATE_ID in checkout.js.'
-        );
-        return Promise.resolve();
-    }
-
-    try {
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-
-        // Absolute URL base — needed so email clients can load product images
-        const siteRoot = new URL('../', window.location.href).href;
-        const absImg = src => {
-            if (!src || src.startsWith('http')) return src ?? '';
-            return siteRoot + src.replace(/^\.\.\//, '');
-        };
-
-        const addrParts = [
-            order.address.street, order.address.city,
-            order.address.state, order.address.zip, order.address.country,
-        ].filter(Boolean);
-
-        const params = {
-            to_name          : `${order.customer.firstName} ${order.customer.lastName}`,
-            to_email         : order.customer.email,
-            order_number     : order.orderNumber,
-            // orders array powers the {{#orders}}…{{/orders}} loop in the template
-            orders           : order.items.map(i => ({
-                image_url : absImg(i.thumbnail),
-                name      : i.name,
-                units     : i.quantity,
-                price     : formatPrice(i.price * i.quantity),
-            })),
-            subtotal         : formatPrice(order.subtotal),
-            shipping         : order.shipping != null ? formatPrice(order.shipping) : 'Not included',
-            total            : formatPrice(order.total),
-            shipping_address : addrParts.join(', '),
-            shipping_method  : order.shippingMethod?.label ?? '—',
-        };
-
-        return emailjs
-            .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
-            .then(() => console.info('[EmailJS] Confirmation email sent to', order.customer.email))
-            .catch(err => console.warn('[EmailJS] Could not send confirmation email:', err));
-
-    } catch (err) {
-        console.warn('[EmailJS] Initialisation error:', err);
-        return Promise.resolve();
-    }
+        `${order.customer.fullName} · ${order.address.formatted}`;
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -427,6 +431,7 @@ function goToStep(step) {
 // ─────────────────────────────────────────────────────────────────────────────
 function init() {
     updateCartBadge();
+    emailjs.init(CONFIG.EMAILJS_PUBLIC_KEY);
 
     const items = getItems();
 

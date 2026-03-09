@@ -1,11 +1,6 @@
 import { getItems, getSubtotal, removeItem, updateQty, clearCart, updateCartBadge } from '../services/cartService.js';
-import { formatPrice } from '../utils/formatters.js';
-
-// Images in JSON are root-relative; this page lives in /pages/
-function imgSrc(src) {
-    if (!src || src.startsWith('http') || src.startsWith('/') || src.startsWith('../')) return src;
-    return `../${src}`;
-}
+import { formatPrice, imgSrc } from '../utils/formatters.js';
+import { showToast } from '../utils/toast.js';
 
 function render() {
     updateCartBadge();
@@ -15,8 +10,10 @@ function render() {
     if (!items.length) {
         container.innerHTML = `
             <div class="text-center py-5">
-                <div class="material-symbols-outlined fs-1 text-muted mb-3">shopping_cart</div>
-                <h2 class="fs-4 text-muted">Your cart is empty</h2>
+                <div style="opacity: 0.6;">
+                    <div class="material-symbols-outlined text-muted mb-3" style="font-size: 10vw; opacity: 0.6;">shopping_cart</div>
+                    <h2 class="fs-4 text-muted">Your cart is empty</h2>
+                </div>
                 <a href="../index.html" class="btn btn-primary mt-3">Continue Shopping</a>
             </div>`;
         return;
@@ -131,13 +128,16 @@ function setupEvents() {
 
     document.querySelectorAll('.remove-btn').forEach(btn => {
         btn.addEventListener('click', () => {
+            const item = getItems().find(i => i.sku === btn.dataset.sku);
             removeItem(btn.dataset.sku);
+            if (item) showToast(`<strong>${item.name}</strong> removed from cart`, 'danger', 'delete');
             render();
         });
     });
 
     document.getElementById('clear-cart-btn')?.addEventListener('click', () => {
         clearCart();
+        showToast('Cart cleared', 'warning', 'delete_sweep');
         render();
     });
 

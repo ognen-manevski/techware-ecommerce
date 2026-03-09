@@ -7,7 +7,8 @@
     {{order_number}}     – e.g. AXN-1A2B3C
     {{orders}}           – array: { image_url, name, units, price } per item
     {{subtotal}}         – formatted subtotal
-    {{shipping}}         – formatted shipping or "Not included"
+    {{tax}}              – formatted tax (18%)
+    {{shipping}}         – formatted shipping or "Free (Local Pickup)" / "Not included"
     {{total}}            – formatted grand total
     {{shipping_method}}  – label e.g. "Domestic"
     {{shipping_address}} – full address string
@@ -25,19 +26,19 @@
         style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
 
         <!-- Header -->
-        <div style="background-color: hsl(244,96%,30%); padding: 20px 24px; text-align: center;">
+        <div style="background-color: #212529; padding: 24px; text-align: center;">
             <a href="https://ognen-manevski.github.io/techware-ecommerce/"
                 style="text-decoration: none; display: inline-block;"
                 target="_blank">
                 <img src="https://ognen-manevski.github.io/techware-ecommerce/images/logo.png"
                      alt="Axion Techware"
-                     height="36"
-                     style="height: 36px; display: block;" />
+                     height="26"
+                     style="height: 26px; display: block;" />
             </a>
         </div>
 
         <!-- Hero band -->
-        <div style="background-color: hsl(244,96%,67%); padding: 18px 24px;">
+        <div style="background-color: #655AFC; padding: 18px 24px;">
             <div style="color: #ffffff; font-size: 18px; font-weight: 700; margin-bottom: 4px;">Thank you for your
                 order, {{to_name}}!</div>
             <div style="color: rgba(255,255,255,0.85); font-size: 13px;">We&rsquo;ll send you tracking info once the
@@ -90,6 +91,11 @@
                 </tr>
                 <tr>
                     <td></td>
+                    <td style="padding: 6px 0; color: #64748b; white-space: nowrap; font-style: italic;">Tax (18% incl.)</td>
+                    <td style="padding: 6px 0 6px 16px; text-align: right; white-space: nowrap; color: #64748b; font-style: italic;">{{tax}}</td>
+                </tr>
+                <tr>
+                    <td></td>
                     <td style="padding: 6px 0; color: #64748b; white-space: nowrap;">Shipping ({{shipping_method}})</td>
                     <td style="padding: 6px 0 6px 16px; text-align: right; white-space: nowrap;">{{shipping}}</td>
                 </tr>
@@ -125,7 +131,7 @@
         </div><!-- /body -->
 
         <!-- Footer -->
-        <div style="background-color: hsl(244,96%,20%); padding: 16px 24px; text-align: center;">
+        <div style="background-color: #212529; padding: 24px; text-align: center;">
             <p style="color: rgba(255,255,255,0.55); font-size: 12px; margin: 0;">
                 This confirmation was sent to <strong style="color:rgba(255,255,255,0.8);">{{to_email}}</strong><br />
                 You received this email because you placed an order at

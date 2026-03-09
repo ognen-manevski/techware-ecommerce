@@ -17,6 +17,7 @@ export class Product {
       count: data.rating.count
     };
     this.thumbnail = data.images.thumbnail;
+    this.weight    = data.weightKg ?? null;   // kg — may be null for some catalogue entries
     this.createdAt = data.createdAt;
   }
 
@@ -24,18 +25,14 @@ export class Product {
   get isInStock() {
     return this.stock > 0;
   }
-  get formattedPrice() {
-    return `$${this.price.toFixed(2)}`;
-  }
 }
 
 
 //extends to ProductDetails for single product page with more details
 export class ProductDetails extends Product {
   constructor(data) {
-    super(data);
+    super(data);   // weight already set by Product base (data.weightKg ?? null)
     this.description = data.description;
-    this.weight = data.weightKg;
     this.warrantyMonths = data.warrantyMonths;
     this.comments = data.comments; //arr or falsey
     this.images = {

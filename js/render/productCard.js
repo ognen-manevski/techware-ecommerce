@@ -101,19 +101,11 @@ export function renderProductCards({ category: cat = null, sortBy: sort = null, 
 }
 
 export function mainRenderLoop(prods, target) {
-  let html = "";
-  prods.forEach(product => {
-    html += renderProductCard(product);
-  });
-  target.innerHTML = html;
+    target.innerHTML = prods.map(renderProductCard).join('');
 }
 
 export function mainRenderLoopList(prods, target) {
-  let html = "";
-  prods.forEach(product => {
-    html += renderProductListItem(product);
-  });
-  target.innerHTML = html;
+    target.innerHTML = prods.map(renderProductListItem).join('');
 }
 
 // Render product card 
@@ -150,11 +142,11 @@ function renderProductCard(product) {
                   </div>
                   <div class="d-flex gap-2 mt-auto">
                       <button class="btn btn-primary btn-add-to-cart flex-grow-1"
-                       data-product-id="${product.id}" ${product.stock > 0 ? '' : 'disabled'}>
+                       ${product.stock > 0 ? '' : 'disabled'}>
                         ${product.stock > 0 ? 'Add to Cart' : 'Out of Stock'}
                       </button>
                       <button class="btn btn-outline-primary d-flex gap-1 align-items-center
-                      justify-content-center view-more-btn" data-product-id="${product.id}">
+                      justify-content-center view-more-btn">
                           <div class="view-more-txt">
                               View
                           </div>
@@ -225,11 +217,10 @@ function renderProductListItem(product) {
             <!-- buttons -->
             <div class="d-flex gap-2">
               <button class="btn btn-primary btn-add-to-cart"
-                      data-product-id="${product.id}" ${product.stock > 0 ? '' : 'disabled'}>
+                      ${product.stock > 0 ? '' : 'disabled'}>
                 ${product.stock > 0 ? 'Add to Cart' : 'Out of Stock'}
               </button>
-              <button class="btn btn-outline-primary d-flex gap-1 align-items-center justify-content-center view-more-btn"
-                      data-product-id="${product.id}">
+              <button class="btn btn-outline-primary d-flex gap-1 align-items-center justify-content-center view-more-btn">
                 <div class="view-more-txt">View</div>
                 <div class="material-symbols-outlined">arrow_outward</div>
               </button>

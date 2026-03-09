@@ -11,8 +11,7 @@ export async function fetchCategories() {
                     return new Category(cat);
                 });
             }))
-        .catch(err => err)
-        .finally(() => console.log("Request Categories finished"));
+        .catch(err => err);
 }
 
 //get all products for cards
@@ -24,8 +23,7 @@ export async function fetchProducts() {
                 return new Product(product);
             });
         })
-        .catch(err => err)
-        .finally(() => { console.log("Request All Products finished") });
+        .catch(err => err);
 }
 
 //get product details for single product page
@@ -35,6 +33,5 @@ export async function fetchProductDetails(id) {
         .then(product => {
             return new ProductDetails(product);
         })
-        .catch(err => err)
-        .finally(() => { console.log("Request Product Details finished") });
+        .catch(err => err);
 }

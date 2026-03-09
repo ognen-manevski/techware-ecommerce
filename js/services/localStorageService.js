@@ -28,19 +28,9 @@ function removeItem(key) {
     }
 }
 
-//clear all
-function clearAll() {
-    try {
-        localStorage.clear();
-    } catch (error) {
-        console.error('Error clearing localStorage:', error);
-    }
-}
-
 //export as singleton service
 export const LocalStorageService = {
     setItem,
     getItem,
     removeItem,
-    clearAll,
 };
