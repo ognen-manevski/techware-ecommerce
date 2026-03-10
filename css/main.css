@@ -606,3 +606,44 @@ img {
     background-position: 0 200px;
   }
 }
+
+/* ============================================================================
+   MEDIA QUERIES
+   ============================================================================ */
+
+@media (max-width: 420px) {
+
+  :root {
+    font-size: clamp(8px, 1vw, 16px);
+  }
+
+  .navbar-brand {
+    font-size: calc(6vw);
+  }
+
+  .home-card-img {
+    padding: 0.5rem;
+  }
+
+  .gallery-thumb {
+    width: 60px;
+    height: 60px;
+  }
+
+
+
+}
+
+@media (max-width: 300px) {
+  #cart-items img {
+    display: none !important;
+  }
+
+  #step-2 img{
+    display: none !important;
+  }
+
+  .sm-cart-text {
+    display: none !important;
+  }
+}
