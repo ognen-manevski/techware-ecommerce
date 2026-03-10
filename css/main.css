@@ -210,19 +210,19 @@ h6 {
   will-change: width;
 }
 
+.view-more-btn span{
+  font-size: 0.1em;
+}
+
 .view-more-txt {
   width: 0px;
-  height: 1.5rem;
-  line-height: 1.5rem;
+  height: 1.5em;
+  line-height: 1.5em;
   overflow: hidden;
   white-space: nowrap;
   transition: all 0.3s ease;
 }
 
-.view-more-btn:hover .view-more-txt {
-  width: 4ch;
-  height: 1.5rem;
-}
 
 .new-badge {
   position: absolute;
@@ -623,6 +623,10 @@ img {
 
   .home-card-img {
     padding: 0.5rem;
+  }
+
+  .view-more-btn .material-symbols-outlined {
+    font-size: 1rem;
   }
 
   .gallery-thumb {

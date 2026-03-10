@@ -111,7 +111,7 @@ export function mainRenderLoopList(prods, target) {
 // Render product card 
 function renderProductCard(product) {
   return `
-      <div class="col-md-6 col-lg-3">
+      <div class="col-6 col-sm-6 col-md-4 col-lg-3">
   <div class="card ${product.compareAtPrice ? 'card-sale' : product.isNew ? 'card-new' : ''}
        product-card h-100" data-product-id="${product.id}" data-sku="${product.sku}">
               <div class="card-bg"></div>
